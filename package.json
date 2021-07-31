@@ -1,0 +1,25 @@
+{
+  "name": "gulp-start-kit",
+  "version": "1.0.0",
+  "description": "- Start files for simple html - css projects with `dart-sass`",
+  "main": "gulpfile.js",
+  "scripts": {
+    "watch": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josiahmokob0/gulp-sass-starter-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josiahmokob0/gulp-sass-starter-kit/issues"
+  },
+  "homepage": "https://github.com/josiahmokob0/gulp-sass-starter-kit#readme",
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.0.2"
+  }
+}

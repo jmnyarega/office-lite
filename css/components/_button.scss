@@ -1,0 +1,5 @@
+@use 'abstract';
+
+.button {
+    color: abstract.$black;
+}

@@ -1,0 +1,10 @@
+/*
+ * Global styles
+ *
+ */
+
+@use 'abstract';
+
+body {
+    background-color: abstract.$light-blue;
+}
