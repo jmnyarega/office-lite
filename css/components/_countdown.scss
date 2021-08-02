@@ -1,0 +1,33 @@
+.countdown {
+	margin-top: 5rem;
+	&__title {
+		text-transform: uppercase;
+		font-weight: bold;
+		span {
+			color: #5175FF;
+		}
+	}
+	&__clock {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: space-between;
+
+		div {
+			background-color: #E9EDFB;
+			padding: 13px 17.5px ;
+			border-radius: 0.5rem;
+
+			p:first-child {
+				color: #5175FF;
+				font-size: 2rem;
+				font-weight: bold;
+			}
+
+			p:last-child {
+				color: #333950;
+				font-size: 0.75rem;
+				font-weight: bold;
+			}
+		}
+	}
+}

@@ -6,4 +6,10 @@
 
 @use 'global';
 @use 'reset';
-@use 'components/button';
+@use 'components/header';
+@use 'components/intro';
+@use 'components/footer';
+@use 'components/countdown';
+@use 'components/form';
+@use 'components/form/input';
+@use 'components/form/button';

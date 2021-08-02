@@ -4,7 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <img
+        src="./assets/home/bg-pattern-header.svg"
+        alt=""
+        class="header__pattern"
+      />
+      <img src="./assets/shared/logo.svg" alt="" class="header__logo" />
+    </header>
+    <!-- <nav>This is the nav</nav> -->
+    <main>
+      <section class="intro container">
+        <h1 class="intro__title">
+          <p>Work smarter.</p>
+          Save time.
+        </h1>
+        <p class="intro__text">
+          Easily manage your projects. Get on the list and receive in-app perks
+          available only to early subscribers. We are moving into final
+          development and getting ready for official launch soon.
+        </p>
+      </section>
+      <section class="countdown container">
+        <h2 class="countdown__title">coming <span>4 nov 2020</span></h2>
+        <div class="countdown__clock clock">
+          <div class="clock__days">
+            <p>47</p>
+            <p>days</p>
+          </div>
+          <div class="clock__hours">
+            <p>07</p>
+            <p>hours</p>
+          </div>
+          <div class="clock__minutes">
+            <p>56</p>
+            <p>min</p>
+          </div>
+          <div class="clock__seconds">
+            <p>14</p>
+            <p>sec</p>
+          </div>
+        </div>
+      </section>
+      <form action="#" novalidate class="form container">
+        <div class="input-control">
+          <input type="text" placeholder="Name" />
+        </div>
+        <div class="input-control">
+          <input type="email" placeholder="Email Address" />
+        </div>
+        <!-- <div class="input-control"> -->
+        <!--   <select name="" id="" placeholder="Basic"></select> -->
+        <!-- </div> -->
+        <div class="input-control">
+          <input type="tel" name="" id="" placeholder="Phone Number" />
+        </div>
+        <div class="input-control">
+          <input type="text" placeholder="Company" />
+        </div>
+        <button type="submit" class="button">Get on the list</button>
+      </form>
+      <footer class="footer">
+        <img
+          src="./assets/home/bg-pattern-footer.svg"
+          alt=""
+          class="footer__pattern"
+        />
+      </footer>
+    </main>
+    <!-- <footer>footer</footer> -->
+  </body>
 </html>

@@ -12,15 +12,202 @@
  *
  */
 body {
-  background-color: lightblue;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #FAFAFA;
 }
 
-/*
- * Custom reset files
- *
- */
+.container {
+  max-width: 90em;
+  width: 90%;
+  margin-inline: auto;
+}
+
+/*----------------------------
+	RESET: START
+------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header__pattern {
+  position: absolute;
+  object-fit: cover;
+  height: 28.625rem;
+  top: -10.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__logo {
+  margin-top: 2.875rem;
+  margin-inline: auto;
+}
+
+.intro {
+  margin-top: 5rem;
+  position: relative;
+  z-index: 2;
+}
+.intro__title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: #333950;
+}
+.intro__text {
+  margin-top: 1.5rem;
+  color: #747B95;
+  max-width: 45ch;
+}
+
+.footer {
+  overflow: hidden;
+  min-height: 20rem;
+  margin-top: -14.625rem;
+  background-color: #25293A;
+  position: relative;
+}
+.footer__pattern {
+  position: absolute;
+  object-fit: cover;
+  height: 28.625rem;
+  bottom: -14.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdown {
+  margin-top: 5rem;
+}
+.countdown__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.countdown__title span {
+  color: #5175FF;
+}
+.countdown__clock {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.countdown__clock div {
+  background-color: #E9EDFB;
+  padding: 13px 17.5px;
+  border-radius: 0.5rem;
+}
+.countdown__clock div p:first-child {
+  color: #5175FF;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.countdown__clock div p:last-child {
+  color: #333950;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.form {
+  margin-top: 5.1875rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+.form .button {
+  margin-top: 2rem;
+}
+.form .input-control + .input-control {
+  margin-top: 1rem;
+}
+
+.input-control {
+  border-bottom: 1px solid #747B95;
+}
+.input-control input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 45px;
+}
+.input-control input::placeholder {
+  color: #747B95;
+}
+.input-control select {
+  appearance: none;
+}
+
 .button {
-  color: black;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 14px 24px;
+  width: 100%;
+  color: #FFFFFF;
+  border-radius: 99rem;
+  background-color: #5175FF;
 }
 
 /*

@@ -6,5 +6,16 @@
 @use 'abstract';
 
 body {
-    background-color: abstract.$light-blue;
+	font-family: abstract.$f-family;
+	font-size: 1rem;
+	text-align: center;
+
+	background-color: #FAFAFA;
+}
+
+
+.container {
+	max-width: 90em;
+	width: 90%;
+	margin-inline: auto;
 }

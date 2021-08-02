@@ -1,0 +1,16 @@
+.footer {
+	overflow: hidden;
+	min-height: 20rem;
+	margin-top: -14.625rem;
+	background-color: #25293A;
+	position: relative;
+
+	&__pattern {
+		position: absolute;
+		object-fit: cover;
+		height: 28.625rem;
+		bottom: -14.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

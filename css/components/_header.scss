@@ -1,0 +1,16 @@
+.header {
+	&__pattern {
+		position: absolute;
+		object-fit: cover;
+		height: 28.625rem;
+		top: -10.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__logo {
+		margin-top: 2.875rem;
+		margin-inline: auto;
+	}
+}
+

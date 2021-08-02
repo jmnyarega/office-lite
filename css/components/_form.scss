@@ -1,0 +1,16 @@
+.form {
+	margin-top: 5.1875rem;
+	background-color: #FFFFFF;
+	border-radius: 0.5rem;
+	padding: 1.5rem;
+	position: relative;
+	z-index: 2;
+
+	.button {
+		margin-top: 2rem;
+	}
+
+	.input-control + .input-control {
+		margin-top: 1rem;
+	}
+}
