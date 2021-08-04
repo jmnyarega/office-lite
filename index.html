@@ -13,7 +13,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header container">
       <img
         src="./assets/home/bg-pattern-header.svg"
         alt=""
@@ -38,19 +38,19 @@
         <h2 class="countdown__title">coming <span>4 nov 2020</span></h2>
         <div class="countdown__clock clock">
           <div class="clock__days">
-            <p>47</p>
+            <p id="days">47</p>
             <p>days</p>
           </div>
           <div class="clock__hours">
-            <p>07</p>
+            <p id="hours">07</p>
             <p>hours</p>
           </div>
           <div class="clock__minutes">
-            <p>56</p>
+            <p id="minutes">56</p>
             <p>min</p>
           </div>
           <div class="clock__seconds">
-            <p>14</p>
+            <p id="seconds">14</p>
             <p>sec</p>
           </div>
         </div>
@@ -62,9 +62,18 @@
         <div class="input-control">
           <input type="email" placeholder="Email Address" />
         </div>
-        <!-- <div class="input-control"> -->
-        <!--   <select name="" id="" placeholder="Basic"></select> -->
-        <!-- </div> -->
+        <div class="input-control select">
+          <input type="checkbox" name="" id="toggle" />
+          <label for="toggle" id="selected" class="selected">
+            <span>Basic Pack</span>Free
+          </label>
+          <div class="options">
+            <a href="#" class="option"><span>Basic Pack</span>Free</a>
+            <a href="#" class="option"><span>Pro Pack</span>$9.99</a>
+            <a href="#" class="option"><span>Ultimate Pack</span>$19.99</a>
+          </div>
+          <div class="checked_img"></div>
+        </div>
         <div class="input-control">
           <input type="tel" name="" id="" placeholder="Phone Number" />
         </div>
@@ -81,6 +90,6 @@
         />
       </footer>
     </main>
-    <!-- <footer>footer</footer> -->
+    <script src="./js/countdown.js"></script>
   </body>
 </html>

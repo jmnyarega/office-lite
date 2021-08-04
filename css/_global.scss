@@ -14,6 +14,15 @@ body {
 
 	@media (min-width: 64em) {
 		text-align: initial;
+		overflow: hidden;
+	}
+}
+
+// layout
+main {
+	@media (min-width: 64em) {
+		display: grid;
+		grid-template-areas: "a d e" " b d e" "c d e"
 	}
 }
 

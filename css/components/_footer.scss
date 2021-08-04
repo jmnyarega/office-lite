@@ -5,6 +5,15 @@
 	background-color: #25293A;
 	position: relative;
 
+	@media (min-width: 64em) {
+		position: absolute;
+		min-height: 100vh;
+		left: 70%;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
 	@media (min-width: 45em) {
 		min-height: 23.75rem;
 	}

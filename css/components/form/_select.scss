@@ -1,0 +1,67 @@
+@import 'abstract';
+
+.select {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	input { display: none; }
+	.selected { cursor: pointer; }
+
+	.checked_img {
+		background-image: url(../assets/sign-up/icon-arrow-down.svg);
+		background-repeat: no-repeat;
+		height: 0.5rem;
+		width: 0.8125rem;
+		transition: all 200ms linear;
+	}
+
+	.options {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 2rem;
+		background-color: #fff;
+		padding: 1.5rem 2rem;
+		border-radius: 0.5rem;
+		box-shadow:-3px 6px 14px 0px rgb(0 0 0 / 33%);
+
+		opacity: 0;
+		z-index: -1;
+		height: 0;
+		transition: all 100ms linear;
+
+		.option {
+			display: block;
+			text-decoration: none;
+			padding-block: 1.5rem 1.3125rem;
+
+			+ .option {
+				border-top: 1px solid #747B95;
+			}
+		}
+	}
+
+	.selected, .option {
+		color: #979797;
+		font-weight: bold;
+		span:first-child {
+			display: inline-block;
+			color: #333950;
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+#toggle:checked {
+	~ .options {
+		opacity: 1;
+		height: auto;
+		z-index: 1;
+	}
+
+	~ .checked_img {
+		transform: rotate(180deg);
+	}
+}

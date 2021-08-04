@@ -2,6 +2,8 @@
 	margin-top: 5rem;
 	position: relative;
 	z-index: 2;
+	grid-area: b;
+
 	@media (min-width: 64em) {
 		text-align: initial;
 	}
