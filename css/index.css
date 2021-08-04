@@ -17,11 +17,16 @@ body {
   text-align: center;
   background-color: #FAFAFA;
 }
+@media (min-width: 64em) {
+  body {
+    text-align: initial;
+  }
+}
 
 .container {
   max-width: 90em;
-  width: 90%;
   margin-inline: auto;
+  width: 80%;
 }
 
 /*----------------------------
@@ -101,9 +106,20 @@ img:not([alt]) {
   left: 50%;
   transform: translateX(-50%);
 }
+@media (min-width: 45em) {
+  .header__pattern {
+    display: none;
+  }
+}
 .header__logo {
   margin-top: 2.875rem;
+  max-width: 9.6875rem;
   margin-inline: auto;
+}
+@media (min-width: 45em) {
+  .header__logo {
+    margin-inline: initial;
+  }
 }
 
 .intro {
@@ -111,15 +127,31 @@ img:not([alt]) {
   position: relative;
   z-index: 2;
 }
+@media (min-width: 64em) {
+  .intro {
+    text-align: initial;
+  }
+}
 .intro__title {
   font-size: 2.5rem;
   line-height: 1.2;
   color: #333950;
 }
+@media (min-width: 45em) {
+  .intro__title p {
+    display: inline;
+  }
+}
 .intro__text {
   margin-top: 1.5rem;
   color: #747B95;
-  max-width: 45ch;
+  max-width: 58ch;
+  margin-inline: auto;
+}
+@media (min-width: 45em) {
+  .intro__text {
+    margin-inline: initial;
+  }
 }
 
 .footer {
@@ -129,17 +161,27 @@ img:not([alt]) {
   background-color: #25293A;
   position: relative;
 }
+@media (min-width: 45em) {
+  .footer {
+    min-height: 23.75rem;
+  }
+}
 .footer__pattern {
   position: absolute;
   object-fit: cover;
   height: 28.625rem;
-  bottom: -14.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .countdown {
   margin-top: 5rem;
+  max-width: 46ch;
+}
+@media (min-width: 64em) {
+  .countdown {
+    margin-inline: initial;
+  }
 }
 .countdown__title {
   text-transform: uppercase;
@@ -155,18 +197,34 @@ img:not([alt]) {
 }
 .countdown__clock div {
   background-color: #E9EDFB;
-  padding: 13px 17.5px;
+  padding: 0.8125rem 1rem;
   border-radius: 0.5rem;
+}
+@media (min-width: 45em) {
+  .countdown__clock div {
+    min-width: 6.25rem;
+    margin-inline: auto;
+  }
 }
 .countdown__clock div p:first-child {
   color: #5175FF;
   font-size: 2rem;
   font-weight: bold;
 }
+@media (min-width: 45em) {
+  .countdown__clock div p:first-child {
+    font-size: 3.5rem;
+  }
+}
 .countdown__clock div p:last-child {
   color: #333950;
   font-size: 0.75rem;
   font-weight: bold;
+}
+@media (min-width: 45em) {
+  .countdown__clock div p:last-child {
+    font-size: initial;
+  }
 }
 
 .form {
@@ -176,6 +234,8 @@ img:not([alt]) {
   padding: 1.5rem;
   position: relative;
   z-index: 2;
+  max-width: 45ch;
+  margin-inline: auto;
 }
 .form .button {
   margin-top: 2rem;
@@ -185,7 +245,7 @@ img:not([alt]) {
 }
 
 .input-control {
-  border-bottom: 1px solid #747B95;
+  border-bottom: 1px solid #979797;
 }
 .input-control input {
   border: none;
@@ -196,18 +256,32 @@ img:not([alt]) {
 .input-control input::placeholder {
   color: #747B95;
 }
+.input-control input:focus::placeholder, .input-control input:hover::placeholder {
+  color: #333950;
+}
 .input-control select {
   appearance: none;
 }
+.input-control:hover, .input-control:focus-within {
+  border-bottom: 1px solid #333950;
+}
 
 .button {
-  border: 1px solid transparent;
   outline: none;
+  border: 1px solid transparent;
   padding: 14px 24px;
   width: 100%;
-  color: #FFFFFF;
   border-radius: 99rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFFFFF;
   background-color: #5175FF;
+  transition: all 200ms linear;
+}
+.button:hover, .button:focus {
+  color: #5175FF;
+  background-color: #ffff;
+  border: 1px solid #5175FF;
 }
 
 /*

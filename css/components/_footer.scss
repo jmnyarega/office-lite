@@ -5,11 +5,14 @@
 	background-color: #25293A;
 	position: relative;
 
+	@media (min-width: 45em) {
+		min-height: 23.75rem;
+	}
+
 	&__pattern {
 		position: absolute;
 		object-fit: cover;
 		height: 28.625rem;
-		bottom: -14.5rem;
 		left: 50%;
 		transform: translateX(-50%);
 	}

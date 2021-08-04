@@ -1,4 +1,6 @@
 .input-control {
+	border-bottom: 1px solid #979797;
+
 	input {
 		border: none;
 		outline: none;
@@ -8,11 +10,18 @@
 		&::placeholder {
 			color: #747B95;
 		}
+
+		&:focus::placeholder, &:hover::placeholder {
+			color: #333950;
+		}
+
 	}
 
 	select {
 		appearance: none;
 	}
 
-	border-bottom: 1px solid #747B95;
+	&:hover, &:focus-within {
+		border-bottom: 1px solid #333950;
+	}
 }

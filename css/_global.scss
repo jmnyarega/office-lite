@@ -11,11 +11,14 @@ body {
 	text-align: center;
 
 	background-color: #FAFAFA;
-}
 
+	@media (min-width: 64em) {
+		text-align: initial;
+	}
+}
 
 .container {
 	max-width: 90em;
-	width: 90%;
 	margin-inline: auto;
+	width: 80%;
 }

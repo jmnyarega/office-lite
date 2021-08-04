@@ -6,6 +6,9 @@
 	position: relative;
 	z-index: 2;
 
+	max-width: 45ch;
+	margin-inline: auto;
+
 	.button {
 		margin-top: 2rem;
 	}
