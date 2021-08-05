@@ -24,21 +24,70 @@
       </div>
     </header>
     <!-- <nav>This is the nav</nav> -->
-    <main>
-      <section class="intro container">
+    <section class="intro container">
+      <div class="intro__img">
+        <img
+          src="./assets/home/illustration-charts.svg"
+          alt="illustration with charts"
+        />
+      </div>
+      <div class="intro__content">
         <h1 class="intro__title">
-          <p>Work smarter.</p>
-          Save time.
+          A simple solution to complex tasks is coming soon
         </h1>
         <p class="intro__text">
-          Easily manage your projects. Get on the list and receive in-app perks
-          available only to early subscribers. We are moving into final
-          development and getting ready for official launch soon.
+          Say goodbye to inefficient juggling of multiple apps, teams, and
+          projects. Officelite is the new collaboration platform built with an
+          intuitive interface to improve productivity.
         </p>
-      </section>
-      <section class="countdown container">
-        <h2 class="countdown__title">coming <span>4 nov 2020</span></h2>
-        <div class="countdown__clock clock">
+        <a href="#" class="intro__button button">Get Started</a>
+      </div>
+    </section>
+    <section class="plans container">
+      <div class="plan plan--basic">
+        <h3 class="plan__title">Basic</h3>
+        <div class="plan__price price">
+          <p class="price__value">Free</p>
+          <p class="price__label">Up to 5 users for free</p>
+        </div>
+        <ul class="plan__perks">
+          <li>Basic document collaboration</li>
+          <li>2 GB storage</li>
+          <ul>Great security and support</li>
+        </ul>
+        <a href="#" class="plan__button button">Try for Free</a>
+      </div>
+      <div class="plan plan--pro">
+        <h3 class="plan__title">Pro</h3>
+        <div class="plan__price price">
+          <p class="price__value">$19.99</p>
+          <p class="price__label">Per user, billed monthly</p>
+        </div>
+        <ul class="plan__perks">
+          <li>All essential integrations</li>
+          <li>50 GB storage</li>
+          <li>More control and insights</li>
+        </ul>
+        <a href="#" class="plan__button button">Try for Free</a>
+      </div>
+      <div class="plan plan--ultimate">
+        <h3 class="plan__title">Ultimate</h3>
+        <div class="plan__price price">
+          <p class="price__value">$19.99</p>
+          <p class="price__label">Per user, billed monthly</p>
+        </div>
+        <ul class="plan__perks">
+          <li>Robust work management</li>
+          <li>100 GB storage</li>
+          <li>VIP support</li>
+        </ul>
+        <a href="#" class="plan__button button">Try for Free</a>
+      </div>
+    </section>
+    <section class="bottom">
+      <section class="countdown countdown--home container">
+        <h2 class="countdown__title countdown__title--home">coming <span>4 nov 2020</span></h2>
+        <div class="countdown__clock clock countdown__clock--home">
           <div class="clock__days">
             <p id="days">47</p>
             <p>days</p>
@@ -57,50 +106,17 @@
           </div>
         </div>
       </section>
-      <form action="#" novalidate class="form container">
-        <div class="input-control">
-          <input type="text" placeholder="Name" />
-        </div>
-        <div class="input-control">
-          <input type="email" placeholder="Email Address" />
-        </div>
-        <div class="input-control select">
-          <input type="checkbox" name="" id="toggle" />
-          <label for="toggle" id="selected" class="selected">
-            <span>Basic Pack</span>Free
-          </label>
-          <div class="options">
-            <a href="#" class="option" onclick="return selectPack(0)">
-              <div class="value"><span>Basic Pack</span>Free</div>
-              <div class="check"></div>
-            </a>
-            <a href="#" class="option" onclick="return selectPack(1)">
-              <div class="value"><span>Pro Pack</span>$9.99</div>
-              <div class="check"></div>
-            </a>
-            <a href="#" class="option" onclick="return selectPack(2)">
-              <div class="value"><span>Ultimate Pack</span>$19.99</div>
-              <div class="check"></div>
-            </a>
-          </div>
-          <div class="checked_img"></div>
-        </div>
-        <div class="input-control">
-          <input type="tel" name="" id="" placeholder="Phone Number" />
-        </div>
-        <div class="input-control">
-          <input type="text" placeholder="Company" />
-        </div>
-        <button type="submit" class="button">Get on the list</button>
-      </form>
-      <footer class="footer">
-        <img
-          src="./assets/home/bg-pattern-footer.svg"
-          alt=""
-          class="footer__pattern"
-        />
-      </footer>
-    </main>
+      <div class="cta">
+        <a href="#" class="button">Get Started</a>
+      </div>
+    </section>
+    <footer class="footer footer--home">
+      <img
+        src="./assets/home/bg-pattern-footer.svg"
+        alt=""
+        class="footer__pattern"
+      />
+    </footer>
     <script src="./js/countdown.js"></script>
     <script src="./js/select-pack.js"></script>
   </body>

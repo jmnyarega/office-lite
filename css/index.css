@@ -34,7 +34,7 @@ body {
 .container {
   max-width: 90em;
   margin-inline: auto;
-  width: 80%;
+  width: 90%;
 }
 
 /*----------------------------
@@ -142,6 +142,16 @@ img:not([alt]) {
   z-index: 2;
   grid-area: intro;
 }
+.intro__img {
+  width: 50%;
+  margin-inline: auto;
+}
+.intro__button {
+  margin-top: 1.5rem;
+  display: inline-block;
+  width: max-content;
+  text-decoration: none;
+}
 @media (min-width: 64em) {
   .intro {
     text-align: initial;
@@ -169,12 +179,80 @@ img:not([alt]) {
   }
 }
 
+/*
+ * - font types
+ * - font sizes ...
+ *
+ */
+/*
+ * variable colors
+ *
+ */
+.plans {
+  margin-top: 5.625rem;
+  position: relative;
+  z-index: 2;
+}
+.plans .plan {
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  background-color: white;
+  color: #333950;
+}
+.plans .plan--pro {
+  background-color: #5175FF;
+  color: white;
+}
+.plans .plan--pro .plan__perks {
+  color: white;
+}
+.plans .plan--pro .plan__button {
+  background-color: white;
+}
+.plans .plan + .plan {
+  margin-top: 1rem;
+}
+.plans .plan__title {
+  font-size: 1.25rem;
+  margin-bottom: 2.75rem;
+}
+.plans .plan .price {
+  margin-bottom: 2.75rem;
+}
+.plans .plan .price__value {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.plans .plan .price__label {
+  font-size: 1rem;
+}
+.plans .plan__perks {
+  color: #747B95;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.plans .plan__perks li + li {
+  margin-top: 1.5rem;
+}
+.plans .plan__button {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: #829CFF;
+  color: #5175FF;
+}
+
 .footer {
   overflow: hidden;
   min-height: 20rem;
   margin-top: -14.625rem;
   background-color: #25293A;
   position: relative;
+}
+.footer--home {
+  margin-top: -100vh;
+  min-height: 100vh;
 }
 @media (min-width: 64em) {
   .footer {
@@ -207,6 +285,9 @@ img:not([alt]) {
 .countdown__title {
   text-transform: uppercase;
   font-weight: bold;
+}
+.countdown__title--home {
+  color: white;
 }
 .countdown__title span {
   color: #5175FF;
@@ -258,6 +339,27 @@ img:not([alt]) {
   .countdown__clock div p:last-child {
     font-size: initial;
   }
+}
+.countdown__clock--home div {
+  background-color: #333950;
+}
+.countdown__clock--home div p:first-child {
+  color: white;
+}
+.countdown__clock--home div p:last-child {
+  color: white;
+  opacity: 0.6;
+}
+
+.bottom {
+  position: relative;
+  z-index: 2;
+}
+.bottom .button {
+  margin-top: 2.5rem;
+  display: inline-block;
+  width: max-content;
+  text-decoration: none;
 }
 
 .form {

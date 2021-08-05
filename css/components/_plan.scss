@@ -1,0 +1,68 @@
+@import 'abstract';
+
+.plans {
+	margin-top: 5.625rem;
+	position: relative;
+	z-index: 2;
+	.plan {
+		border-radius: 0.5rem;
+		padding: 2.5rem;
+		background-color: white;
+		color: #333950;
+
+		&--pro {
+			background-color: #5175FF;
+			color: white;
+
+			.plan__perks {
+				color: white;
+			}
+
+			.plan__button {
+				background-color: white;
+			}
+		}
+
+		+ .plan {
+			margin-top: 1rem;
+		}
+
+		&__title {
+			font-size: 1.25rem;
+			margin-bottom: 2.75rem;
+		}
+
+
+		.price {
+			margin-bottom: 2.75rem;
+			&__value {
+				font-size: 3.5rem;
+				font-weight: bold;
+			}
+
+			&__label {
+				font-size: 1rem;
+			}
+		}
+
+		&__perks {
+			color: #747B95;
+			list-style: none;
+			padding: 0;
+			text-align: center;
+
+			li + li {
+				margin-top: 1.5rem;
+			}
+		}
+
+		&__button {
+			text-decoration: none;
+			display: inline-block;
+			margin-top: 2rem;
+
+			background-color: #829CFF;
+			color: #5175FF;
+		}
+	}
+}

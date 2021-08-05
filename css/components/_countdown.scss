@@ -5,6 +5,10 @@
 	&__title {
 		text-transform: uppercase;
 		font-weight: bold;
+
+		&--home {
+			color: white;
+		}
 		span {
 			color: #5175FF;
 		}
@@ -49,5 +53,23 @@
 				}
 			}
 		}
+		&--home {
+			div {
+				background-color: #333950;
+				p:first-child { color: white; }
+				p:last-child { color: white; opacity: 0.6 }
+			}
+		}
+	}
+}
+
+.bottom {
+	position: relative;
+	z-index: 2;
+	.button {
+		margin-top: 2.5rem;
+		display: inline-block;
+		width: max-content;
+		text-decoration: none;
 	}
 }
