@@ -16,7 +16,7 @@ gulp.task(
   "files:watch",
   gulp.series("sass", function () {
     gulp.watch("css/**/*.scss", gulp.series("sass"));
-    bs.watch(["*.html", "css/*"]).on("change", bs.reload);
+    bs.watch(["*.html", "css/*", "js/*"]).on("change", bs.reload);
   })
 );
 

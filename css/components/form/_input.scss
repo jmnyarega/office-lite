@@ -14,13 +14,7 @@
 		&:focus::placeholder, &:hover::placeholder {
 			color: #333950;
 		}
-
 	}
-
-	select {
-		appearance: none;
-	}
-
 	&:hover, &:focus-within {
 		border-bottom: 1px solid #333950;
 	}

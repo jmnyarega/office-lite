@@ -22,7 +22,7 @@ body {
 main {
 	@media (min-width: 64em) {
 		display: grid;
-		grid-template-areas: "a d e" " b d e" "c d e"
+		grid-template-areas: "intro form footer" "countdown form footer";
 	}
 }
 

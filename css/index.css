@@ -27,7 +27,7 @@ body {
 @media (min-width: 64em) {
   main {
     display: grid;
-    grid-template-areas: "a d e" " b d e" "c d e";
+    grid-template-areas: "intro form footer" "countdown form footer";
   }
 }
 
@@ -131,7 +131,8 @@ img:not([alt]) {
 @media (min-width: 64em) {
   .header {
     margin-inline: initial;
-    margin-left: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -139,7 +140,7 @@ img:not([alt]) {
   margin-top: 5rem;
   position: relative;
   z-index: 2;
-  grid-area: b;
+  grid-area: intro;
 }
 @media (min-width: 64em) {
   .intro {
@@ -177,6 +178,7 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .footer {
+    grid-area: footer;
     position: absolute;
     min-height: 100vh;
     left: 70%;
@@ -200,7 +202,7 @@ img:not([alt]) {
 
 .countdown {
   margin-top: 5rem;
-  grid-area: c;
+  grid-area: countdown;
 }
 .countdown__title {
   text-transform: uppercase;
@@ -270,7 +272,7 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .form {
-    grid-area: d;
+    grid-area: form;
     box-shadow: 2px 20px 20px 0px rgba(0, 0, 0, 0.1);
   }
 }
@@ -295,9 +297,6 @@ img:not([alt]) {
 }
 .input-control input:focus::placeholder, .input-control input:hover::placeholder {
   color: #333950;
-}
-.input-control select {
-  appearance: none;
 }
 .input-control:hover, .input-control:focus-within {
   border-bottom: 1px solid #333950;
@@ -335,6 +334,7 @@ img:not([alt]) {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding-block: 1rem 0.5rem;
 }
 .select input {
   display: none;
@@ -353,9 +353,9 @@ img:not([alt]) {
   position: absolute;
   left: 0;
   right: 0;
-  top: 2rem;
+  top: 3.5em;
   background-color: #fff;
-  padding: 1.5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   box-shadow: -3px 6px 14px 0px rgba(0, 0, 0, 0.33);
   opacity: 0;
@@ -363,10 +363,18 @@ img:not([alt]) {
   height: 0;
   transition: all 100ms linear;
 }
+.select .options .check-true {
+  background-image: url(../../../assets/sign-up/icon-check.svg);
+  background-repeat: no-repeat;
+  min-height: 0.9375rem;
+  width: 0.75rem;
+}
 .select .options .option {
   display: block;
   text-decoration: none;
   padding-block: 1.5rem 1.3125rem;
+  display: flex;
+  justify-content: space-between;
 }
 .select .options .option + .option {
   border-top: 1px solid #747B95;

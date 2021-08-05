@@ -21,7 +21,9 @@
 	}
 	@media (min-width: 64em) {
 		margin-inline: initial;
-		margin-left: 6rem;
+		// ??
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 

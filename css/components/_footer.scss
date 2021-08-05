@@ -6,6 +6,7 @@
 	position: relative;
 
 	@media (min-width: 64em) {
+		grid-area: footer;
 		position: absolute;
 		min-height: 100vh;
 		left: 70%;

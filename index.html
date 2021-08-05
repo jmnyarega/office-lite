@@ -13,13 +13,15 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header container">
-      <img
-        src="./assets/home/bg-pattern-header.svg"
-        alt=""
-        class="header__pattern"
-      />
-      <img src="./assets/shared/logo.svg" alt="" class="header__logo" />
+    <header class="header">
+      <div class="container">
+        <img
+          src="./assets/home/bg-pattern-header.svg"
+          alt=""
+          class="header__pattern"
+        />
+        <img src="./assets/shared/logo.svg" alt="" class="header__logo" />
+      </div>
     </header>
     <!-- <nav>This is the nav</nav> -->
     <main>
@@ -68,9 +70,18 @@
             <span>Basic Pack</span>Free
           </label>
           <div class="options">
-            <a href="#" class="option"><span>Basic Pack</span>Free</a>
-            <a href="#" class="option"><span>Pro Pack</span>$9.99</a>
-            <a href="#" class="option"><span>Ultimate Pack</span>$19.99</a>
+            <a href="#" class="option" onclick="return selectPack(0)">
+              <div class="value"><span>Basic Pack</span>Free</div>
+              <div class="check"></div>
+            </a>
+            <a href="#" class="option" onclick="return selectPack(1)">
+              <div class="value"><span>Pro Pack</span>$9.99</div>
+              <div class="check"></div>
+            </a>
+            <a href="#" class="option" onclick="return selectPack(2)">
+              <div class="value"><span>Ultimate Pack</span>$19.99</div>
+              <div class="check"></div>
+            </a>
           </div>
           <div class="checked_img"></div>
         </div>
@@ -91,5 +102,6 @@
       </footer>
     </main>
     <script src="./js/countdown.js"></script>
+    <script src="./js/select-pack.js"></script>
   </body>
 </html>

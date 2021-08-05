@@ -5,6 +5,7 @@
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	padding-block: 1rem 0.5rem;
 
 	input { display: none; }
 	.selected { cursor: pointer; }
@@ -21,9 +22,9 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 2rem;
+		top: 3.5em;
 		background-color: #fff;
-		padding: 1.5rem 2rem;
+		padding: 0.5rem 2rem;
 		border-radius: 0.5rem;
 		box-shadow:-3px 6px 14px 0px rgb(0 0 0 / 33%);
 
@@ -32,10 +33,19 @@
 		height: 0;
 		transition: all 100ms linear;
 
+		.check-true {
+			background-image: url(../../../assets/sign-up/icon-check.svg);
+			background-repeat: no-repeat;
+			min-height: 0.9375rem;
+			width: 0.75rem;
+		}
+
 		.option {
 			display: block;
 			text-decoration: none;
 			padding-block: 1.5rem 1.3125rem;
+			display: flex;
+			justify-content: space-between;
 
 			+ .option {
 				border-top: 1px solid #747B95;
