@@ -1,0 +1,103 @@
+@import 'abstract';
+
+.plans {
+	margin-top: 5.625rem;
+	position: relative;
+	z-index: 2;
+	.plan {
+		border-radius: 0.5rem;
+		padding: 2.5rem;
+		background-color: white;
+		color: #333950;
+
+		@media (min-width: 45em) {
+			text-align: initial;
+			display: grid;
+			align-items: center;
+			grid-template-rows: 0.5fr 0.5fr 0fr;
+			grid-template-areas: "title perks"
+								 "price perks"
+								 "button perks";
+		}
+
+		&__perks {
+			color: #747B95;
+			list-style: none;
+			padding: 0;
+			text-align: center;
+			grid-area: perks;
+			@media (min-width: 45em) {
+				text-align: initial;
+			}
+
+			li + li {
+				margin-top: 1.5rem;
+			}
+		}
+
+		&__button {
+			text-decoration: none;
+			display: inline-block;
+			margin-top: 2rem;
+			width: max-content;
+
+			background-color: rgba(130, 156, 255, 0.3);
+			color: #5175FF;
+
+			@media (min-width: 45em) {
+				grid-area: button;
+			}
+		}
+
+		&--pro {
+			background-color: #5175FF;
+			background-image: url(../../assets/home/bg-pattern-pricing.svg);
+			background-repeat: no-repeat;
+			background-position: bottom center;
+			min-height: 31.75rem;
+			color: white;
+			@media (min-width: 45em) {
+				min-height: initial;
+				background-position: center left -100%;
+				background-size: 80% auto;
+			}
+			&__perks {
+				color: white;
+			}
+
+			&__button {
+				background-color: white;
+			}
+		}
+
+		+ .plan {
+			margin-top: 1rem;
+		}
+
+		&__title {
+			font-size: 1.25rem;
+			margin-bottom: 2.75rem;
+			@media (min-width: 45em) {
+				grid-area: title;
+				margin-bottom: 0;
+			}
+		}
+
+
+		.price {
+			margin-bottom: 2.75rem;
+			@media (min-width: 45em) {
+				grid-area: price;
+				margin-bottom: 0;
+			}
+			&__value {
+				font-size: 3.5rem;
+				font-weight: bold;
+			}
+
+			&__label {
+				font-size: 1rem;
+			}
+		}
+	}
+}

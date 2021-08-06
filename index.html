@@ -13,17 +13,10 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <img
-          src="./assets/home/bg-pattern-header.svg"
-          alt=""
-          class="header__pattern"
-        />
+    <header class="header container">
         <img src="./assets/shared/logo.svg" alt="" class="header__logo" />
       </div>
     </header>
-    <!-- <nav>This is the nav</nav> -->
     <section class="intro container">
       <div class="intro__img">
         <img
@@ -53,22 +46,22 @@
         <ul class="plan__perks">
           <li>Basic document collaboration</li>
           <li>2 GB storage</li>
-          <ul>Great security and support</li>
+          <li>Great security and support</li>
         </ul>
-        <a href="#" class="plan__button button">Try for Free</a>
+        <a href="#0" class="plan__button button">Try for Free</a>
       </div>
       <div class="plan plan--pro">
-        <h3 class="plan__title">Pro</h3>
-        <div class="plan__price price">
+        <h3 class="plan__title plan--pro__title">Pro</h3>
+        <div class="plan__price plan--pro__price price">
           <p class="price__value">$19.99</p>
           <p class="price__label">Per user, billed monthly</p>
         </div>
-        <ul class="plan__perks">
+        <ul class="plan__perks plan--pro__perks">
           <li>All essential integrations</li>
           <li>50 GB storage</li>
           <li>More control and insights</li>
         </ul>
-        <a href="#" class="plan__button button">Try for Free</a>
+        <a href="#0" class="plan__button plan--pro__button button">Try for Free</a>
       </div>
       <div class="plan plan--ultimate">
         <h3 class="plan__title">Ultimate</h3>
@@ -81,11 +74,11 @@
           <li>100 GB storage</li>
           <li>VIP support</li>
         </ul>
-        <a href="#" class="plan__button button">Try for Free</a>
+        <a href="#0" class="plan__button button">Try for Free</a>
       </div>
     </section>
     <section class="bottom">
-      <section class="countdown countdown--home container">
+      <section class="countdown countdown--home">
         <h2 class="countdown__title countdown__title--home">coming <span>4 nov 2020</span></h2>
         <div class="countdown__clock clock countdown__clock--home">
           <div class="clock__days">
@@ -110,13 +103,6 @@
         <a href="#" class="button">Get Started</a>
       </div>
     </section>
-    <footer class="footer footer--home">
-      <img
-        src="./assets/home/bg-pattern-footer.svg"
-        alt=""
-        class="footer__pattern"
-      />
-    </footer>
     <script src="./js/countdown.js"></script>
     <script src="./js/select-pack.js"></script>
   </body>

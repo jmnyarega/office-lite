@@ -233,46 +233,136 @@ img:not([alt]) {
   border: 1px solid #5175FF;
 }
 
-.intro {
-  margin-top: -9rem;
+.input-control {
+  border-bottom: 1px solid #979797;
+}
+.input-control input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 45px;
+}
+.input-control input::placeholder {
+  color: #747B95;
+}
+.input-control input:focus::placeholder, .input-control input:hover::placeholder {
+  color: #333950;
+}
+.input-control:hover, .input-control:focus-within {
+  border-bottom: 1px solid #333950;
+}
+
+/*
+ * - font types
+ * - font sizes ...
+ *
+ */
+/*
+ * variable colors
+ *
+ */
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-block: 1rem 0.5rem;
+}
+.select input {
+  display: none;
+}
+.select .selected {
+  cursor: pointer;
+}
+.select .checked_img {
+  background-image: url(../assets/sign-up/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  height: 0.5rem;
+  width: 0.8125rem;
+  transition: all 200ms linear;
+}
+.select .options {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3.5em;
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: -3px 6px 14px 0px rgba(0, 0, 0, 0.33);
+  opacity: 0;
+  z-index: -1;
+  height: 0;
+  transition: all 100ms linear;
+}
+.select .options .check-true {
+  background-image: url(../../../assets/sign-up/icon-check.svg);
+  background-repeat: no-repeat;
+  min-height: 0.9375rem;
+  width: 0.75rem;
+}
+.select .options .option {
+  display: block;
+  text-decoration: none;
+  padding-block: 1.5rem 1.3125rem;
+  display: flex;
+  justify-content: space-between;
+}
+.select .options .option + .option {
+  border-top: 1px solid #747B95;
+}
+.select .selected, .select .option {
+  color: #979797;
+  font-weight: bold;
+}
+.select .selected span:first-child, .select .option span:first-child {
+  display: inline-block;
+  color: #333950;
+  margin-right: 0.5rem;
+}
+
+#toggle:checked ~ .options {
+  opacity: 1;
+  height: auto;
+  z-index: 1;
+}
+#toggle:checked ~ .checked_img {
+  transform: rotate(180deg);
+}
+
+.form {
+  margin-top: 5.1875rem;
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
   position: relative;
   z-index: 2;
+  max-width: 45ch;
+  margin-inline: auto;
+}
+@media (min-width: 64em) {
+  .form {
+    grid-area: form;
+    box-shadow: 2px 20px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+.form .button {
+  margin-top: 2rem;
+}
+.form .input-control + .input-control {
+  margin-top: 1rem;
+}
+
+.intro {
+  position: relative;
+  z-index: 2;
+  margin-top: -9rem;
+  grid-area: intro;
 }
 @media (min-width: 45em) {
   .intro {
-    text-align: initial;
     margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
   }
-}
-.intro__content {
-  max-width: 40ch;
-  margin-inline: auto;
-}
-@media (min-width: 45em) {
-  .intro__content {
-    margin-inline: initial;
-  }
-}
-.intro__img {
-  width: 50%;
-  margin-inline: auto;
-  margin-bottom: 4rem;
-}
-@media (min-width: 45em) {
-  .intro__img {
-    width: 35%;
-    margin-inline: initial;
-    margin-bottom: 0;
-  }
-}
-.intro__button {
-  margin-top: 1.5rem;
-  display: inline-block;
-  width: max-content;
-  text-decoration: none;
 }
 @media (min-width: 64em) {
   .intro {
@@ -283,7 +373,6 @@ img:not([alt]) {
   font-size: 2.5rem;
   line-height: 1.2;
   color: #333950;
-  max-width: 20ch;
 }
 @media (min-width: 45em) {
   .intro__title p {
@@ -302,112 +391,39 @@ img:not([alt]) {
   }
 }
 
-/*
- * - font types
- * - font sizes ...
- *
- */
-/*
- * variable colors
- *
- */
-.plans {
-  margin-top: 5.625rem;
+.footer {
+  overflow: hidden;
+  min-height: 20rem;
+  margin-top: -14.625rem;
+  background-color: #25293A;
   position: relative;
-  z-index: 2;
 }
-.plans .plan {
-  border-radius: 0.5rem;
-  padding: 2.5rem;
-  background-color: white;
-  color: #333950;
+.footer--home {
+  margin-top: -100vh;
+  min-height: 100vh;
 }
-@media (min-width: 45em) {
-  .plans .plan {
-    text-align: initial;
-    display: grid;
-    align-items: center;
-    grid-template-rows: 0.5fr 0.5fr 0fr;
-    grid-template-areas: "title perks" "price perks" "button perks";
+@media (min-width: 64em) {
+  .footer {
+    grid-area: footer;
+    position: absolute;
+    min-height: 100vh;
+    left: 70%;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
-.plans .plan__perks {
-  color: #747B95;
-  list-style: none;
-  padding: 0;
-  text-align: center;
-  grid-area: perks;
-}
 @media (min-width: 45em) {
-  .plans .plan__perks {
-    text-align: initial;
+  .footer {
+    min-height: 23.75rem;
   }
 }
-.plans .plan__perks li + li {
-  margin-top: 1.5rem;
-}
-.plans .plan__button {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 2rem;
-  width: max-content;
-  background-color: rgba(130, 156, 255, 0.3);
-  color: #5175FF;
-}
-@media (min-width: 45em) {
-  .plans .plan__button {
-    grid-area: button;
-  }
-}
-.plans .plan--pro {
-  background-color: #5175FF;
-  background-image: url(../../assets/home/bg-pattern-pricing.svg);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  min-height: 31.75rem;
-  color: white;
-}
-@media (min-width: 45em) {
-  .plans .plan--pro {
-    min-height: initial;
-    background-position: center left -100%;
-    background-size: 80% auto;
-  }
-}
-.plans .plan--pro__perks {
-  color: white;
-}
-.plans .plan--pro__button {
-  background-color: white;
-}
-.plans .plan + .plan {
-  margin-top: 1rem;
-}
-.plans .plan__title {
-  font-size: 1.25rem;
-  margin-bottom: 2.75rem;
-}
-@media (min-width: 45em) {
-  .plans .plan__title {
-    grid-area: title;
-    margin-bottom: 0;
-  }
-}
-.plans .plan .price {
-  margin-bottom: 2.75rem;
-}
-@media (min-width: 45em) {
-  .plans .plan .price {
-    grid-area: price;
-    margin-bottom: 0;
-  }
-}
-.plans .plan .price__value {
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-.plans .plan .price__label {
-  font-size: 1rem;
+.footer__pattern {
+  position: absolute;
+  object-fit: cover;
+  height: 28.625rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .container {
@@ -416,10 +432,10 @@ img:not([alt]) {
   width: 90%;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 64em) {
   main {
     display: grid;
-    grid-template-areas: "intro" "plans plans" "bottom";
+    grid-template-areas: "intro form footer" "countdown form footer";
   }
 }
 

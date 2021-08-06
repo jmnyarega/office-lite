@@ -1,20 +1,11 @@
 .intro {
-	margin-top: 5rem;
 	position: relative;
 	z-index: 2;
+	margin-top: -9rem;
 	grid-area: intro;
 
-	&__img {
-		width: 50%;
-		margin-inline: auto;
-	}
-
-	&__button {
-		margin-top: 1.5rem;
-		display: inline-block;
-		width: max-content;
-
-		text-decoration: none;
+	@media (min-width: 45em) {
+		margin-top: 5rem;
 	}
 
 	@media (min-width: 64em) {

@@ -1,5 +1,7 @@
 .countdown {
 	margin-top: 5rem;
+	max-width: max-content;
+	margin-inline: auto;
 	grid-area: countdown;
 
 	&__title {
@@ -66,10 +68,20 @@
 .bottom {
 	position: relative;
 	z-index: 2;
-	.button {
-		margin-top: 2.5rem;
-		display: inline-block;
+	padding-block: 6.25rem;
+	background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
+	background-position: center;
+	background-color: #25293A;
+	overflow: hidden;
+
+	.cta {
+		margin-inline: auto;
 		width: max-content;
-		text-decoration: none;
+		.button {
+			margin-top: 2.5rem;
+			display: inline-block;
+			width: max-content;
+			text-decoration: none;
+		}
 	}
 }

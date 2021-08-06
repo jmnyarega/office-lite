@@ -4,14 +4,11 @@
  *
  */
 
-@use 'global';
-@use 'reset';
-@use 'components/header';
-@use 'components/intro';
-@use 'components/plan';
-@use 'components/footer';
-@use 'components/countdown';
-@use 'components/form';
-@use 'components/form/input';
-@use 'components/form/button';
-@use 'components/form/select';
+@use 'abstract/global';
+@use 'abstract/reset';
+@use 'components/shared/header';
+@use 'components/shared/countdown';
+@use 'components/shared/button';
+@use 'components/home/intro';
+@use 'components/home/plan';
+@use 'components/home/layout';

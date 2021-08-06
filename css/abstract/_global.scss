@@ -1,0 +1,18 @@
+/*
+ * Global styles
+ *
+ */
+
+@use './fonts';
+
+body {
+	font-family: fonts.$f-family;
+	font-size: 1rem;
+	text-align: center;
+
+	background-color: #FAFAFA;
+
+	@media (min-width: 64em) {
+		text-align: initial;
+	}
+}
