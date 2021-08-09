@@ -8,14 +8,14 @@
 	font-weight: bold;
 
 	cursor: pointer;
-	color: #FFFFFF;
-	background-color: #5175FF;
+	color: abstract.$white;
+	background-color: abstract.$sky-blue;
 
 	transition: all 200ms linear;
 
 	&:hover, &:focus {
-		color: #5175FF;
-		background-color: #ffff;
-		border: 1px solid  #5175FF;
+		color: abstract.$sky-blue;
+		background-color: abstract.$white;
+		border: 1px solid  abstract.$sky-blue;
 	}
 }

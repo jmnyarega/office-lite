@@ -1,3 +1,5 @@
+@use 'abstract';
+
 .intro {
 	margin-top: -9rem;
 	position: relative;
@@ -45,7 +47,7 @@
 	&__title {
 		font-size: 2.5rem;
 		line-height: 1.2;
-		color: #333950;
+		color: abstract.$dark-blue;
 		max-width: 18ch;
 		@media (min-width: 45em) {
 			p { display: inline; }
@@ -54,7 +56,7 @@
 	}
 	&__text {
 		margin-top: 1.5rem;
-		color: #747B95;
+		color: abstract.$dust-blue;
 		max-width: 55ch;
 		margin-inline: auto;
 		@media (min-width: 45em) {

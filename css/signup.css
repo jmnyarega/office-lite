@@ -4,6 +4,10 @@
  *
  */
 /*
+ * variable colors
+ *
+ */
+/*
  * Global styles
  *
  */
@@ -11,7 +15,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1rem;
   text-align: center;
-  background-color: #FAFAFA;
+  background-color: #f2f2f2;
 }
 @media (min-width: 64em) {
   body {
@@ -136,7 +140,7 @@ img:not([alt]) {
   color: white;
 }
 .countdown__title span {
-  color: #5175FF;
+  color: #5274ff;
 }
 .countdown__clock {
   margin-top: 2rem;
@@ -150,7 +154,7 @@ img:not([alt]) {
   }
 }
 .countdown__clock div {
-  background-color: #E9EDFB;
+  background-color: rgba(128, 153, 255, 0.3);
   padding: 0.8125rem 1rem;
   border-radius: 0.5rem;
 }
@@ -166,7 +170,7 @@ img:not([alt]) {
   }
 }
 .countdown__clock div p:first-child {
-  color: #5175FF;
+  color: #5274ff;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -176,7 +180,7 @@ img:not([alt]) {
   }
 }
 .countdown__clock div p:last-child {
-  color: #333950;
+  color: #343a51;
   font-size: 0.75rem;
   font-weight: bold;
   text-align: center;
@@ -187,7 +191,7 @@ img:not([alt]) {
   }
 }
 .countdown__clock--home div {
-  background-color: #333950;
+  background-color: #343a51;
 }
 .countdown__clock--home div p:first-child {
   color: white;
@@ -204,7 +208,7 @@ img:not([alt]) {
   background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
   background-position: bottom center;
   background-size: 50% auto;
-  background-color: #25293A;
+  background-color: #262a3b;
   overflow: hidden;
 }
 @media (min-width: 64em) {
@@ -224,15 +228,11 @@ img:not([alt]) {
   text-decoration: none;
 }
 .bottom .cta .button:hover, .bottom .cta .button:focus {
-  color: #25293A;
+  color: #262a3b;
   background-color: white;
-  border: 1px solid #25293A;
+  border: 1px solid #262a3b;
 }
 
-/*
- * variable colors
- *
- */
 .button {
   outline: none;
   border: 1px solid transparent;
@@ -240,18 +240,18 @@ img:not([alt]) {
   border-radius: 99rem;
   font-weight: bold;
   cursor: pointer;
-  color: #FFFFFF;
-  background-color: #5175FF;
+  color: white;
+  background-color: #5274ff;
   transition: all 200ms linear;
 }
 .button:hover, .button:focus {
-  color: #5175FF;
-  background-color: #ffff;
-  border: 1px solid #5175FF;
+  color: #5274ff;
+  background-color: white;
+  border: 1px solid #5274ff;
 }
 
 .input-control {
-  border-bottom: 1px solid #979797;
+  border-bottom: 1px solid #969696;
 }
 .input-control input {
   border: none;
@@ -260,13 +260,13 @@ img:not([alt]) {
   height: 45px;
 }
 .input-control input::placeholder {
-  color: #747B95;
+  color: #757c95;
 }
 .input-control input:focus::placeholder, .input-control input:hover::placeholder {
-  color: #333950;
+  color: #343a51;
 }
 .input-control:hover, .input-control:focus-within {
-  border-bottom: 1px solid #333950;
+  border-bottom: 1px solid currentColor;
 }
 
 /*
@@ -412,7 +412,7 @@ img:not([alt]) {
   overflow: hidden;
   min-height: 20rem;
   margin-top: -14.625rem;
-  background-color: #25293A;
+  background-color: #262a3b;
   position: relative;
 }
 .footer--home {

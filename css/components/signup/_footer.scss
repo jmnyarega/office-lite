@@ -1,8 +1,10 @@
+@use 'abstract';
+
 .footer {
 	overflow: hidden;
 	min-height: 20rem;
 	margin-top: -14.625rem;
-	background-color: #25293A;
+	background-color: abstract.$very-dark-blue;
 	position: relative;
 
 	&--home {

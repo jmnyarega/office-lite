@@ -1,5 +1,7 @@
+@use 'abstract';
+
 .input-control {
-	border-bottom: 1px solid #979797;
+	border-bottom: 1px solid abstract.$grayish;
 
 	input {
 		border: none;
@@ -8,14 +10,14 @@
 		height: 45px;
 
 		&::placeholder {
-			color: #747B95;
+			color: abstract.$dust-blue;
 		}
 
 		&:focus::placeholder, &:hover::placeholder {
-			color: #333950;
+			color: abstract.$dark-blue;
 		}
 	}
 	&:hover, &:focus-within {
-		border-bottom: 1px solid #333950;
+		border-bottom: 1px solid currentColor;
 	}
 }

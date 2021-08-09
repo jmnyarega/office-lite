@@ -3,14 +3,14 @@
  *
  */
 
-@use './fonts';
+@use 'abstract';
 
 body {
-	font-family: fonts.$f-family;
+	font-family: abstract.$f-family;
 	font-size: 1rem;
 	text-align: center;
 
-	background-color: #FAFAFA;
+	background-color: abstract.$light-gray;
 
 	@media (min-width: 64em) {
 		text-align: initial;

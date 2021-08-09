@@ -1,3 +1,5 @@
+@use 'abstract';
+
 .countdown {
 	margin-top: 5rem;
 	max-width: max-content;
@@ -12,10 +14,10 @@
 		}
 
 		&--home {
-			color: white;
+			color: abstract.$white;
 		}
 		span {
-			color: #5175FF;
+			color: abstract.$sky-blue;
 		}
 	}
 
@@ -29,7 +31,7 @@
 		}
 
 		div {
-			background-color: #E9EDFB;
+			background-color: abstract.$very-light-blue;
 			padding: 0.8125rem 1rem ;
 			border-radius: 0.5rem;
 
@@ -41,7 +43,7 @@
 				}
 			}
 			p:first-child {
-				color: #5175FF;
+				color: abstract.$sky-blue;
 				font-size: 2rem;
 				font-weight: bold;
 				@media (min-width: 45em) {
@@ -49,7 +51,7 @@
 				}
 			}
 			p:last-child {
-				color: #333950;
+				color: abstract.$dark-blue;
 				font-size: 0.75rem;
 				font-weight: bold;
 				text-align: center;
@@ -60,9 +62,9 @@
 		}
 		&--home {
 			div {
-				background-color: #333950;
-				p:first-child { color: white; }
-				p:last-child { color: white; opacity: 0.6 }
+				background-color: abstract.$dark-blue;
+				p:first-child { color: abstract.$white; }
+				p:last-child { color: abstract.$white; opacity: 0.6 }
 			}
 		}
 	}
@@ -75,7 +77,7 @@
 	background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
 	background-position: bottom center;
 	background-size: 50% auto;
-	background-color: #25293A;
+	background-color: abstract.$very-dark-blue;
 	overflow: hidden;
 
 	@media (min-width: 64em) {
@@ -92,9 +94,9 @@
 			width: max-content;
 			text-decoration: none;
 			&:hover, &:focus {
-				color: #25293A;
-				background-color: white;
-				border: 1px solid #25293A;
+				color: abstract.$very-dark-blue;
+				background-color: abstract.$white;
+				border: 1px solid abstract.$very-dark-blue;
 			}
 		}
 	}

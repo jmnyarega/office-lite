@@ -1,6 +1,8 @@
+@use 'abstract';
+
 .form {
 	margin-top: 5.1875rem;
-	background-color: #FFFFFF;
+	background-color: abstract.$white;
 	border-radius: 0.5rem;
 	padding: 1.5rem;
 	position: relative;

@@ -1,4 +1,4 @@
-@import 'abstract';
+@use 'abstract';
 
 .plans {
 	margin-top: 5.625rem;
@@ -13,8 +13,8 @@
 	.plan {
 		border-radius: 0.5rem;
 		padding: 2.5rem;
-		background-color: white;
-		color: #333950;
+		background-color: abstract.$white;
+		color: abstract.$dark-blue;
 
 		@media (min-width: 45em) {
 			text-align: initial;
@@ -32,7 +32,7 @@
 		}
 
 		&__perks {
-			color: #747B95;
+			color: abstract.$dust-blue;
 			list-style: none;
 			padding: 0;
 			text-align: center;
@@ -52,13 +52,13 @@
 			margin-top: 2rem;
 			width: max-content;
 
-			background-color: rgba(130, 156, 255, 0.3);
-			color: #5175FF;
+			background-color: abstract.$very-light-blue;
+			color: abstract.$sky-blue;
 
 			&:hover, &:focus {
-				color: white;
-				background-color: #5175FF;
-				border: 1px solid  #5175FF;
+				color: abstract.$white;
+				background-color: abstract.$sky-blue;
+				border: 1px solid  abstract.$sky-blue;
 			}
 
 			@media (min-width: 45em) {
@@ -67,12 +67,12 @@
 		}
 
 		&--pro {
-			background-color: #5175FF;
+			background-color: abstract.$sky-blue;
 			background-image: url(../../assets/home/bg-pattern-pricing.svg);
 			background-repeat: no-repeat;
 			background-position: bottom center;
 			min-height: 31.75rem;
-			color: white;
+			color: abstract.$white;
 			@media (min-width: 45em) {
 				min-height: initial;
 				background-position: center left -100%;
@@ -84,16 +84,16 @@
 				overflow: hidden;
 			}
 			&__perks {
-				color: white;
+				color: abstract.$white;
 			}
 
 			&__button {
-				background-color: white;
+				background-color: abstract.$white;
 
 				&:hover, &:focus {
-					color: white;
-					background-color: #5175FF;
-					border: 1px solid  white;
+					color: abstract.$white;
+					background-color: abstract.$sky-blue;
+					border: 1px solid  abstract.$white;
 				}
 			}
 		}
