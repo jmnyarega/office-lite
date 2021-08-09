@@ -127,6 +127,11 @@ img:not([alt]) {
   text-transform: uppercase;
   font-weight: bold;
 }
+@media (min-width: 45em) {
+  .countdown__title {
+    text-align: center;
+  }
+}
 .countdown__title--home {
   color: white;
 }
@@ -194,12 +199,19 @@ img:not([alt]) {
 
 .bottom {
   position: relative;
-  z-index: 2;
-  padding-block: 6.25rem;
+  padding-block: 33rem 6.25rem;
+  margin-top: -33rem;
   background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-  background-position: center;
+  background-position: bottom center;
+  background-size: 50% auto;
   background-color: #25293A;
   overflow: hidden;
+}
+@media (min-width: 64em) {
+  .bottom {
+    padding-block: 15rem 6.25rem;
+    margin-top: -15rem;
+  }
 }
 .bottom .cta {
   margin-inline: auto;
@@ -210,6 +222,11 @@ img:not([alt]) {
   display: inline-block;
   width: max-content;
   text-decoration: none;
+}
+.bottom .cta .button:hover, .bottom .cta .button:focus {
+  color: #25293A;
+  background-color: white;
+  border: 1px solid #25293A;
 }
 
 /*

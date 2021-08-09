@@ -4,6 +4,12 @@
 	margin-top: 5.625rem;
 	position: relative;
 	z-index: 2;
+	@media (min-width: 64em) {
+		display: flex;
+		justify-content: space-around;
+		align-items: baseline;
+	}
+
 	.plan {
 		border-radius: 0.5rem;
 		padding: 2.5rem;
@@ -12,12 +18,17 @@
 
 		@media (min-width: 45em) {
 			text-align: initial;
-			display: grid;
 			align-items: center;
+			display: grid;
 			grid-template-rows: 0.5fr 0.5fr 0fr;
 			grid-template-areas: "title perks"
-								 "price perks"
-								 "button perks";
+			"price perks"
+			"button perks";
+		}
+
+		@media (min-width: 64em) {
+			grid-template-rows: auto;
+			grid-template-areas: "title title" "price price" "perks perks" "button button";
 		}
 
 		&__perks {
@@ -44,6 +55,12 @@
 			background-color: rgba(130, 156, 255, 0.3);
 			color: #5175FF;
 
+			&:hover, &:focus {
+				color: white;
+				background-color: #5175FF;
+				border: 1px solid  #5175FF;
+			}
+
 			@media (min-width: 45em) {
 				grid-area: button;
 			}
@@ -61,12 +78,23 @@
 				background-position: center left -100%;
 				background-size: 80% auto;
 			}
+			@media (min-width: 64em) {
+				background-position: top -40% center;
+				background-size: cover;
+				overflow: hidden;
+			}
 			&__perks {
 				color: white;
 			}
 
 			&__button {
 				background-color: white;
+
+				&:hover, &:focus {
+					color: white;
+					background-color: #5175FF;
+					border: 1px solid  white;
+				}
 			}
 		}
 

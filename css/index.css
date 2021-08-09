@@ -127,6 +127,11 @@ img:not([alt]) {
   text-transform: uppercase;
   font-weight: bold;
 }
+@media (min-width: 45em) {
+  .countdown__title {
+    text-align: center;
+  }
+}
 .countdown__title--home {
   color: white;
 }
@@ -194,12 +199,19 @@ img:not([alt]) {
 
 .bottom {
   position: relative;
-  z-index: 2;
-  padding-block: 6.25rem;
+  padding-block: 33rem 6.25rem;
+  margin-top: -33rem;
   background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-  background-position: center;
+  background-position: bottom center;
+  background-size: 50% auto;
   background-color: #25293A;
   overflow: hidden;
+}
+@media (min-width: 64em) {
+  .bottom {
+    padding-block: 15rem 6.25rem;
+    margin-top: -15rem;
+  }
 }
 .bottom .cta {
   margin-inline: auto;
@@ -210,6 +222,11 @@ img:not([alt]) {
   display: inline-block;
   width: max-content;
   text-decoration: none;
+}
+.bottom .cta .button:hover, .bottom .cta .button:focus {
+  color: #25293A;
+  background-color: white;
+  border: 1px solid #25293A;
 }
 
 /*
@@ -244,11 +261,12 @@ img:not([alt]) {
     margin-top: 5rem;
     display: flex;
     justify-content: space-between;
+    column-gap: 1.5rem;
+    align-items: center;
     flex-direction: row-reverse;
   }
 }
 .intro__content {
-  max-width: 40ch;
   margin-inline: auto;
 }
 @media (min-width: 45em) {
@@ -263,7 +281,6 @@ img:not([alt]) {
 }
 @media (min-width: 45em) {
   .intro__img {
-    width: 35%;
     margin-inline: initial;
     margin-bottom: 0;
   }
@@ -283,7 +300,7 @@ img:not([alt]) {
   font-size: 2.5rem;
   line-height: 1.2;
   color: #333950;
-  max-width: 20ch;
+  max-width: 18ch;
 }
 @media (min-width: 45em) {
   .intro__title p {
@@ -293,7 +310,7 @@ img:not([alt]) {
 .intro__text {
   margin-top: 1.5rem;
   color: #747B95;
-  max-width: 58ch;
+  max-width: 55ch;
   margin-inline: auto;
 }
 @media (min-width: 45em) {
@@ -316,6 +333,13 @@ img:not([alt]) {
   position: relative;
   z-index: 2;
 }
+@media (min-width: 64em) {
+  .plans {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
 .plans .plan {
   border-radius: 0.5rem;
   padding: 2.5rem;
@@ -325,10 +349,16 @@ img:not([alt]) {
 @media (min-width: 45em) {
   .plans .plan {
     text-align: initial;
-    display: grid;
     align-items: center;
+    display: grid;
     grid-template-rows: 0.5fr 0.5fr 0fr;
     grid-template-areas: "title perks" "price perks" "button perks";
+  }
+}
+@media (min-width: 64em) {
+  .plans .plan {
+    grid-template-rows: auto;
+    grid-template-areas: "title title" "price price" "perks perks" "button button";
   }
 }
 .plans .plan__perks {
@@ -354,6 +384,11 @@ img:not([alt]) {
   background-color: rgba(130, 156, 255, 0.3);
   color: #5175FF;
 }
+.plans .plan__button:hover, .plans .plan__button:focus {
+  color: white;
+  background-color: #5175FF;
+  border: 1px solid #5175FF;
+}
 @media (min-width: 45em) {
   .plans .plan__button {
     grid-area: button;
@@ -374,11 +409,23 @@ img:not([alt]) {
     background-size: 80% auto;
   }
 }
+@media (min-width: 64em) {
+  .plans .plan--pro {
+    background-position: top -40% center;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
 .plans .plan--pro__perks {
   color: white;
 }
 .plans .plan--pro__button {
   background-color: white;
+}
+.plans .plan--pro__button:hover, .plans .plan--pro__button:focus {
+  color: white;
+  background-color: #5175FF;
+  border: 1px solid white;
 }
 .plans .plan + .plan {
   margin-top: 1rem;
@@ -414,6 +461,11 @@ img:not([alt]) {
   max-width: 90em;
   margin-inline: auto;
   width: 90%;
+}
+@media (min-width: 45em) {
+  .container {
+    width: 80%;
+  }
 }
 
 @media (min-width: 45em) {

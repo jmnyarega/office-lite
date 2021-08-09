@@ -7,11 +7,12 @@
 		margin-top: 5rem;
 		display: flex;
 		justify-content: space-between;
+		column-gap: 1.5rem;
+		align-items: center;
 		flex-direction: row-reverse;
 	}
 
 	&__content {
-		max-width: 40ch;
 		margin-inline: auto;
 
 		@media (min-width: 45em) {
@@ -24,7 +25,6 @@
 		margin-inline: auto;
 		margin-bottom: 4rem;
 		@media (min-width: 45em) {
-			width: 35%;
 			margin-inline: initial;
 			margin-bottom: 0;
 		}
@@ -46,7 +46,7 @@
 		font-size: 2.5rem;
 		line-height: 1.2;
 		color: #333950;
-		max-width: 20ch;
+		max-width: 18ch;
 		@media (min-width: 45em) {
 			p { display: inline; }
 		}
@@ -55,7 +55,7 @@
 	&__text {
 		margin-top: 1.5rem;
 		color: #747B95;
-		max-width: 58ch;
+		max-width: 55ch;
 		margin-inline: auto;
 		@media (min-width: 45em) {
 			margin-inline: initial;

@@ -1,4 +1,3 @@
-
 const clearSelected = () => {
   const elements = document.querySelectorAll(".options .check");
   elements.forEach((el) => el.classList.remove("check-true"));
