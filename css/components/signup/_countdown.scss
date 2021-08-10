@@ -1,7 +1,7 @@
 .countdown {
     grid-area: countdown;
     @media (min-width: 64em) {
-		margin-inline: auto;
+		margin-inline: initial;
 		max-width: initial;
     }
 }

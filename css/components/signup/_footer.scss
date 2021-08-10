@@ -14,13 +14,7 @@
 		background-position: bottom center;
 	}
 
-	&--home {
-		margin-top: -100vh; // ???? wtf
-		min-height: 100vh; // ??? refactor....
-	}
-
 	@media (min-width: 64em) {
-		grid-area: footer;
 		position: absolute;
 		min-height: 100vh;
 		left: 70%;

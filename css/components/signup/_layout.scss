@@ -9,6 +9,9 @@ body {
 main {
 	@media (min-width: 64em) {
 		display: grid;
-		grid-template-areas: "intro form footer" "countdown form footer";
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: space-between;
+		grid-template-areas: "intro form"
+							 "countdown form";
 	}
 }

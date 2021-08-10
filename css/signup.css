@@ -229,7 +229,7 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .countdown {
-    margin-inline: auto;
+    margin-inline: initial;
     max-width: initial;
   }
 }
@@ -358,6 +358,7 @@ img:not([alt]) {
 @media (min-width: 64em) {
   .form {
     grid-area: form;
+    align-self: center;
     box-shadow: 2px 20px 20px 0px rgba(0, 0, 0, 0.1);
   }
 }
@@ -400,7 +401,7 @@ img:not([alt]) {
   max-width: 58ch;
   margin-inline: auto;
 }
-@media (min-width: 45em) {
+@media (min-width: 64em) {
   .intro__text {
     margin-inline: initial;
   }
@@ -420,13 +421,8 @@ img:not([alt]) {
     background-position: bottom center;
   }
 }
-.footer--home {
-  margin-top: -100vh;
-  min-height: 100vh;
-}
 @media (min-width: 64em) {
   .footer {
-    grid-area: footer;
     position: absolute;
     min-height: 100vh;
     left: 70%;
@@ -450,6 +446,8 @@ img:not([alt]) {
 @media (min-width: 64em) {
   main {
     display: grid;
-    grid-template-areas: "intro form footer" "countdown form footer";
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    grid-template-areas: "intro form" "countdown form";
   }
 }
