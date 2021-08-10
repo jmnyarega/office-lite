@@ -6,75 +6,76 @@
     margin-inline: auto;
     grid-area: countdown;
     @media (min-width: 64em) {
-        margin-inline: initial;
+	max-width: initial;
     }
 
     &__title {
-        text-transform: uppercase;
-        font-weight: bold;
-        @media (min-width: 45em) {
-            text-align: center;
-		}
-
-        @media (min-width: 64em) {
-            text-align: initial;
-		}
-
-		&--home {
-			color: abstract.$white;
-		}
-		span {
-			color: abstract.$sky-blue;
-		}
+	text-transform: uppercase;
+	font-weight: bold;
+	color: abstract.$dark-blue;
+	@media (min-width: 45em) {
+	    text-align: center;
 	}
 
-	&__clock {
-		margin-top: 2rem;
-		display: flex;
-		justify-content: center;
-		column-gap: 1rem;
-		@media (min-width: 64em) {
-			justify-content: start;
-		}
-
-		div {
-			background-color: abstract.$very-light-blue;
-			padding: 0.8125rem 1rem ;
-			border-radius: 0.5rem;
-
-			@media (min-width: 45em) {
-				min-width: 6.25rem;
-				margin-inline: auto;
-				@media (min-width: 45em) {
-					margin-inline: initial;
-				}
-			}
-			p:first-child {
-				color: abstract.$sky-blue;
-				font-size: 2rem;
-				font-weight: bold;
-				@media (min-width: 45em) {
-					font-size: 3.5rem;
-				}
-			}
-			p:last-child {
-				color: abstract.$dark-blue;
-				font-size: 0.75rem;
-				font-weight: bold;
-				text-align: center;
-				@media (min-width: 45em) {
-					font-size: initial;
-				}
-			}
-		}
-		&--home {
-			div {
-				background-color: abstract.$dark-blue;
-				p:first-child { color: abstract.$white; }
-				p:last-child { color: abstract.$white; opacity: 0.6 }
-			}
-		}
+	@media (min-width: 64em) {
+	    text-align: initial;
 	}
+
+	&--home {
+	    color: abstract.$white;
+	}
+	span {
+	    color: abstract.$sky-blue;
+	}
+    }
+
+    &__clock {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	column-gap: 1rem;
+	@media (min-width: 64em) {
+	    justify-content: start;
+	}
+
+	div {
+	    background-color: abstract.$very-light-blue;
+	    padding: 0.8125rem 1rem ;
+	    border-radius: 0.5rem;
+
+	    @media (min-width: 45em) {
+		min-width: 6.25rem;
+		margin-inline: auto;
+		@media (min-width: 45em) {
+		    margin-inline: initial;
+		}
+	    }
+	    p:first-child {
+		color: abstract.$sky-blue;
+		font-size: 2rem;
+		font-weight: bold;
+		@media (min-width: 45em) {
+		    font-size: 3.5rem;
+		}
+	    }
+	    p:last-child {
+		color: abstract.$dark-blue;
+		font-size: 0.75rem;
+		font-weight: bold;
+		text-align: center;
+		@media (min-width: 45em) {
+		    font-size: initial;
+		}
+	    }
+	}
+	&--home {
+	    div {
+		background-color: abstract.$dark-blue;
+		p:first-child { color: abstract.$white; }
+		p:last-child { color: abstract.$white; opacity: 0.6 }
+	    }
+	}
+    }
 }
 
 .bottom {
@@ -84,42 +85,42 @@
     background-color: abstract.$very-dark-blue;
 
     @media (min-width: 45em) {
-        background-position: center;
-        padding-block: 15rem 6.25rem;
-        margin-top: -15rem;
+	background-position: center;
+	padding-block: 15rem 6.25rem;
+	margin-top: -15rem;
     }
 
     @media (min-width: 64em) {
-        background-position: -12rem -12rem;
-        background-size: 95% auto;
-        padding-block: 15rem 6.25rem;
-        margin-top: -15rem;
+	background-position: -12rem -12rem;
+	background-size: 95% auto;
+	padding-block: 15rem 6.25rem;
+	margin-top: -15rem;
     }
 
     .container {
-        @media (min-width: 64em) {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+	@media (min-width: 64em) {
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	}
     }
 
     .cta {
-        margin-inline: auto;
-        width: max-content;
-        @media (min-width: 64em) {
-            margin-inline: initial;
-        }
-        .button {
-            margin-top: 2.5rem;
-            display: inline-block;
-            width: max-content;
-            text-decoration: none;
-            &:hover, &:focus {
-                color: abstract.$very-dark-blue;
-                background-color: abstract.$white;
-                border: 1px solid abstract.$very-dark-blue;
-            }
-        }
+	margin-inline: auto;
+	width: max-content;
+	@media (min-width: 64em) {
+	    margin-inline: initial;
+	}
+	.button {
+	    margin-top: 2.5rem;
+	    display: inline-block;
+	    width: max-content;
+	    text-decoration: none;
+	    &:hover, &:focus {
+		color: abstract.$very-dark-blue;
+		background-color: abstract.$white;
+		border: 1px solid abstract.$very-dark-blue;
+	    }
+	}
     }
 }

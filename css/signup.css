@@ -40,6 +40,12 @@ body {
   }
 }
 
+.container {
+  max-width: 90em;
+  margin-inline: auto;
+  width: 80%;
+}
+
 /*----------------------------
 	RESET: START
 ------------------------------*/
@@ -132,7 +138,6 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .header {
-    margin-inline: initial;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -146,12 +151,13 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .countdown {
-    margin-inline: initial;
+    max-width: initial;
   }
 }
 .countdown__title {
   text-transform: uppercase;
   font-weight: bold;
+  color: #343a51;
 }
 @media (min-width: 45em) {
   .countdown__title {
@@ -280,7 +286,7 @@ img:not([alt]) {
 .button {
   outline: none;
   border: 1px solid transparent;
-  padding: 14px 24px;
+  padding: 0.8em 1.6em;
   border-radius: 99rem;
   font-weight: bold;
   cursor: pointer;
@@ -482,12 +488,6 @@ img:not([alt]) {
   .footer {
     min-height: 23.75rem;
   }
-}
-
-.container {
-  max-width: 90em;
-  margin-inline: auto;
-  width: 80%;
 }
 
 @media (min-width: 45em) {
