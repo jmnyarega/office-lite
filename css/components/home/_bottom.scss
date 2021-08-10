@@ -1,0 +1,49 @@
+@use 'abstract';
+
+.bottom {
+    padding-block: 33rem 6.25rem;
+    margin-top: -33rem;
+    background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
+    background-color: abstract.$very-dark-blue;
+	grid-area: bottom;
+
+    @media (min-width: 45em) {
+	background-position: center;
+	padding-block: 15rem 6.25rem;
+	margin-top: -15rem;
+    }
+
+    @media (min-width: 64em) {
+	background-position: -12rem -12rem;
+	background-size: 95% auto;
+	padding-block: 15rem 6.25rem;
+	margin-top: -15rem;
+    }
+
+    .container {
+	@media (min-width: 64em) {
+	    display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	}
+    }
+
+    .cta {
+	margin-inline: auto;
+	width: max-content;
+	@media (min-width: 64em) {
+	    margin-inline: initial;
+	}
+	.button {
+	    margin-top: 2.5rem;
+	    display: inline-block;
+	    width: max-content;
+	    text-decoration: none;
+	    &:hover, &:focus {
+		color: abstract.$very-dark-blue;
+		background-color: abstract.$white;
+		border: 1px solid abstract.$very-dark-blue;
+	    }
+	}
+    }
+}

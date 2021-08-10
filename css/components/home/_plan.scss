@@ -4,6 +4,8 @@
 	margin-top: 5.625rem;
 	position: relative;
 	z-index: 2;
+	grid-area: plans;
+
 	@media (min-width: 64em) {
 		display: flex;
 		justify-content: space-between;

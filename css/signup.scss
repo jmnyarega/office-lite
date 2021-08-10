@@ -1,13 +1,8 @@
-/*
- *
- * Home for sass
- *
- */
-
 @use 'abstract/global';
 @use 'abstract/reset';
 @use 'components/shared/header';
-@use 'components/shared/countdown';
+@use 'components/shared/countdown' as countdown-component;
+@use 'components/signup/countdown';
 @use 'components/shared/button';
 @use 'components/signup/form/input';
 @use 'components/signup/form/select';

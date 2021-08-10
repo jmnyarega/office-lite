@@ -4,6 +4,7 @@
 	margin-top: -9rem;
 	position: relative;
 	z-index: 2;
+	grid-area: intro;
 	@media (min-width: 45em) {
 		text-align: initial;
 		margin-top: 5rem;
@@ -26,6 +27,7 @@
 		width: 50%;
 		margin-inline: auto;
 		margin-bottom: 4rem;
+
 		@media (min-width: 45em) {
 			margin-inline: initial;
 			margin-bottom: 0;
@@ -37,7 +39,6 @@
 		display: inline-block;
 		width: max-content;
 		text-decoration: none;
-
 		box-shadow: -1px 5px 10px 3px rgba($color: abstract.$sky-blue, $alpha: 0.3);
 	}
 

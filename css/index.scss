@@ -1,12 +1,10 @@
-/*
- *
- * Home for sass
- *
- */
 @use 'abstract/global';
 @use 'abstract/reset';
 @use 'components/shared/header';
-@use 'components/shared/countdown';
+@use 'components/shared/countdown' as common-countdown;
+@use 'components/home/countdown';
+@use 'components/home/layout';
 @use 'components/shared/button';
 @use 'components/home/intro';
 @use 'components/home/plan';
+@use 'components/home/bottom';

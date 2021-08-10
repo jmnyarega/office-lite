@@ -15,7 +15,7 @@
 
 	&:hover, &:focus {
 		color: abstract.$sky-blue;
-		background-color: abstract.$white;
+		background-color: transparent;
 		border: 1px solid  abstract.$sky-blue;
 	}
 }

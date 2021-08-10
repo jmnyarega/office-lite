@@ -43,7 +43,7 @@ body {
 .container {
   max-width: 90em;
   margin-inline: auto;
-  width: 80%;
+  width: 90%;
 }
 
 /*----------------------------
@@ -120,6 +120,7 @@ img:not([alt]) {
   min-height: 20rem;
   background-size: 32rem auto;
   background-position: bottom center;
+  grid-area: header;
 }
 @media (min-width: 45em) {
   .header {
@@ -147,11 +148,10 @@ img:not([alt]) {
   margin-top: 5rem;
   max-width: max-content;
   margin-inline: auto;
-  grid-area: countdown;
 }
 @media (min-width: 64em) {
   .countdown {
-    max-width: initial;
+    margin-inline: initial;
   }
 }
 .countdown__title {
@@ -223,6 +223,7 @@ img:not([alt]) {
     font-size: initial;
   }
 }
+
 .countdown__clock--home div {
   background-color: #343a51;
 }
@@ -234,53 +235,11 @@ img:not([alt]) {
   opacity: 0.6;
 }
 
-.bottom {
-  padding-block: 33rem 6.25rem;
-  margin-top: -33rem;
-  background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-  background-color: #262a3b;
-}
-@media (min-width: 45em) {
-  .bottom {
-    background-position: center;
-    padding-block: 15rem 6.25rem;
-    margin-top: -15rem;
-  }
-}
 @media (min-width: 64em) {
-  .bottom {
-    background-position: -12rem -12rem;
-    background-size: 95% auto;
-    padding-block: 15rem 6.25rem;
-    margin-top: -15rem;
+  body {
+    display: grid;
+    grid-template-areas: "header header" "intro intro" "plans plans" "bottom bottom";
   }
-}
-@media (min-width: 64em) {
-  .bottom .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-.bottom .cta {
-  margin-inline: auto;
-  width: max-content;
-}
-@media (min-width: 64em) {
-  .bottom .cta {
-    margin-inline: initial;
-  }
-}
-.bottom .cta .button {
-  margin-top: 2.5rem;
-  display: inline-block;
-  width: max-content;
-  text-decoration: none;
-}
-.bottom .cta .button:hover, .bottom .cta .button:focus {
-  color: #262a3b;
-  background-color: white;
-  border: 1px solid #262a3b;
 }
 
 .button {
@@ -296,7 +255,7 @@ img:not([alt]) {
 }
 .button:hover, .button:focus {
   color: #5274ff;
-  background-color: white;
+  background-color: transparent;
   border: 1px solid #5274ff;
 }
 
@@ -304,6 +263,7 @@ img:not([alt]) {
   margin-top: -9rem;
   position: relative;
   z-index: 2;
+  grid-area: intro;
 }
 @media (min-width: 45em) {
   .intro {
@@ -374,6 +334,7 @@ img:not([alt]) {
   margin-top: 5.625rem;
   position: relative;
   z-index: 2;
+  grid-area: plans;
 }
 @media (min-width: 64em) {
   .plans {
@@ -516,8 +477,52 @@ img:not([alt]) {
   font-size: 1rem;
 }
 
-/*
- *
- * Home for sass
- *
- */
+.bottom {
+  padding-block: 33rem 6.25rem;
+  margin-top: -33rem;
+  background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
+  background-color: #262a3b;
+  grid-area: bottom;
+}
+@media (min-width: 45em) {
+  .bottom {
+    background-position: center;
+    padding-block: 15rem 6.25rem;
+    margin-top: -15rem;
+  }
+}
+@media (min-width: 64em) {
+  .bottom {
+    background-position: -12rem -12rem;
+    background-size: 95% auto;
+    padding-block: 15rem 6.25rem;
+    margin-top: -15rem;
+  }
+}
+@media (min-width: 64em) {
+  .bottom .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.bottom .cta {
+  margin-inline: auto;
+  width: max-content;
+}
+@media (min-width: 64em) {
+  .bottom .cta {
+    margin-inline: initial;
+  }
+}
+.bottom .cta .button {
+  margin-top: 2.5rem;
+  display: inline-block;
+  width: max-content;
+  text-decoration: none;
+}
+.bottom .cta .button:hover, .bottom .cta .button:focus {
+  color: #262a3b;
+  background-color: white;
+  border: 1px solid #262a3b;
+}

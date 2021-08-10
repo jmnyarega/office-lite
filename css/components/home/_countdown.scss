@@ -1,0 +1,14 @@
+@use 'abstract';
+
+.countdown {
+    &__clock {
+	&--home {
+	    div {
+		background-color: abstract.$dark-blue;
+		p:first-child { color: abstract.$white; }
+		p:last-child { color: abstract.$white; opacity: 0.6 }
+	    }
+	}
+    }
+}
+

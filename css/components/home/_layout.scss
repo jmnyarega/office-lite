@@ -1,0 +1,11 @@
+// layout
+body {
+    @media (min-width: 64em) {
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"intro intro"
+		"plans plans"
+		"bottom bottom";
+    }
+}
