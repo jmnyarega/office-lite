@@ -15,11 +15,28 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1rem;
   text-align: center;
+  background: no-repeat url(../../../assets/home/bg-pattern-header.svg);
+  min-height: 20rem;
+  background-size: 32rem auto;
+  background-position: bottom center;
   background-color: #f2f2f2;
+}
+@media (min-width: 45em) {
+  body {
+    background-image: url(../../assets/home/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-position-x: 35.4375rem;
+    background-position-y: -12.4375rem;
+    background-size: 80% auto;
+  }
 }
 @media (min-width: 64em) {
   body {
     text-align: initial;
+    background-image: url(../../assets/home/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-position-x: 35.4375rem;
+    background-position-y: -25.4375rem;
   }
 }
 
@@ -127,6 +144,11 @@ img:not([alt]) {
   margin-inline: auto;
   grid-area: countdown;
 }
+@media (min-width: 64em) {
+  .countdown {
+    margin-inline: initial;
+  }
+}
 .countdown__title {
   text-transform: uppercase;
   font-weight: bold;
@@ -134,6 +156,11 @@ img:not([alt]) {
 @media (min-width: 45em) {
   .countdown__title {
     text-align: center;
+  }
+}
+@media (min-width: 64em) {
+  .countdown__title {
+    text-align: initial;
   }
 }
 .countdown__title--home {
@@ -202,24 +229,41 @@ img:not([alt]) {
 }
 
 .bottom {
-  position: relative;
   padding-block: 33rem 6.25rem;
   margin-top: -33rem;
   background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-  background-position: bottom center;
-  background-size: 50% auto;
   background-color: #262a3b;
-  overflow: hidden;
+}
+@media (min-width: 45em) {
+  .bottom {
+    background-position: center;
+    padding-block: 15rem 6.25rem;
+    margin-top: -15rem;
+  }
 }
 @media (min-width: 64em) {
   .bottom {
+    background-position: -12rem -12rem;
+    background-size: 95% auto;
     padding-block: 15rem 6.25rem;
     margin-top: -15rem;
+  }
+}
+@media (min-width: 64em) {
+  .bottom .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .bottom .cta {
   margin-inline: auto;
   width: max-content;
+}
+@media (min-width: 64em) {
+  .bottom .cta {
+    margin-inline: initial;
+  }
 }
 .bottom .cta .button {
   margin-top: 2.5rem;
@@ -290,6 +334,7 @@ img:not([alt]) {
   display: inline-block;
   width: max-content;
   text-decoration: none;
+  box-shadow: -1px 5px 10px 3px rgba(82, 116, 255, 0.3);
 }
 @media (min-width: 64em) {
   .intro {
@@ -327,13 +372,13 @@ img:not([alt]) {
 @media (min-width: 64em) {
   .plans {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
   }
 }
 .plans .plan {
   border-radius: 0.5rem;
-  padding: 2.5rem;
+  padding: 2.5rem 3.5rem;
   background-color: white;
   color: #343a51;
 }
@@ -348,6 +393,7 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .plans .plan {
+    text-align: center;
     grid-template-rows: auto;
     grid-template-areas: "title title" "price price" "perks perks" "button button";
   }
@@ -362,6 +408,11 @@ img:not([alt]) {
 @media (min-width: 45em) {
   .plans .plan__perks {
     text-align: initial;
+  }
+}
+@media (min-width: 64em) {
+  .plans .plan__perks {
+    text-align: center;
   }
 }
 .plans .plan__perks li + li {
@@ -385,6 +436,11 @@ img:not([alt]) {
     grid-area: button;
   }
 }
+@media (min-width: 64em) {
+  .plans .plan__button {
+    margin-inline: auto;
+  }
+}
 .plans .plan--pro {
   background-color: #5274ff;
   background-image: url(../../assets/home/bg-pattern-pricing.svg);
@@ -402,9 +458,10 @@ img:not([alt]) {
 }
 @media (min-width: 64em) {
   .plans .plan--pro {
-    background-position: top -40% center;
-    background-size: cover;
-    overflow: hidden;
+    background-size: 80% auto;
+    background-position: top center;
+    background-position-y: -10.5rem;
+    background-size: 150% auto;
   }
 }
 .plans .plan--pro__perks {
@@ -438,6 +495,11 @@ img:not([alt]) {
   .plans .plan .price {
     grid-area: price;
     margin-bottom: 0;
+  }
+}
+@media (min-width: 64em) {
+  .plans .plan .price {
+    margin-bottom: 4rem;
   }
 }
 .plans .plan .price__value {

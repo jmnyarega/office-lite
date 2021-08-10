@@ -4,8 +4,15 @@
 	overflow: hidden;
 	min-height: 20rem;
 	margin-top: -14.625rem;
+
+	padding-block: 33rem 6.25rem;
+	background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
 	background-color: abstract.$very-dark-blue;
-	position: relative;
+	background-position: center;
+
+	@media (min-width: 64em) {
+		background-position: bottom center;
+	}
 
 	&--home {
 		margin-top: -100vh; // ???? wtf
@@ -24,13 +31,5 @@
 
 	@media (min-width: 45em) {
 		min-height: 23.75rem;
-	}
-
-	&__pattern {
-		position: absolute;
-		object-fit: cover;
-		height: 28.625rem;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 }

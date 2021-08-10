@@ -1,4 +1,4 @@
-@import 'abstract';
+@use 'abstract';
 
 .select {
 	display: flex;
@@ -47,6 +47,10 @@
 			display: flex;
 			justify-content: space-between;
 
+			&:hover, &:focus {
+				outline: 1px dotted abstract.$dust-blue;
+			}
+
 			+ .option {
 				border-top: 1px solid abstract.$dust-blue;
 			}
@@ -61,6 +65,10 @@
 			color: abstract.$dark-blue;
 			margin-right: 0.5rem;
 		}
+	}
+
+	&:focus-within {
+		outline: 1px dotted abstract.$dust-blue;
 	}
 }
 

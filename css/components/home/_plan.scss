@@ -6,13 +6,13 @@
 	z-index: 2;
 	@media (min-width: 64em) {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: baseline;
 	}
 
 	.plan {
 		border-radius: 0.5rem;
-		padding: 2.5rem;
+		padding: 2.5rem 3.5rem;
 		background-color: abstract.$white;
 		color: abstract.$dark-blue;
 
@@ -27,6 +27,7 @@
 		}
 
 		@media (min-width: 64em) {
+			text-align: center;
 			grid-template-rows: auto;
 			grid-template-areas: "title title" "price price" "perks perks" "button button";
 		}
@@ -39,6 +40,10 @@
 			grid-area: perks;
 			@media (min-width: 45em) {
 				text-align: initial;
+			}
+
+			@media (min-width: 64em) {
+				text-align: center;
 			}
 
 			li + li {
@@ -64,6 +69,10 @@
 			@media (min-width: 45em) {
 				grid-area: button;
 			}
+
+			@media (min-width: 64em) {
+				margin-inline: auto;
+			}
 		}
 
 		&--pro {
@@ -73,16 +82,20 @@
 			background-position: bottom center;
 			min-height: 31.75rem;
 			color: abstract.$white;
+
 			@media (min-width: 45em) {
 				min-height: initial;
 				background-position: center left -100%;
 				background-size: 80% auto;
 			}
+
 			@media (min-width: 64em) {
-				background-position: top -40% center;
-				background-size: cover;
-				overflow: hidden;
+				background-size: 80% auto;
+				background-position: top center;
+				background-position-y: -10.5rem;
+				background-size: 150% auto;
 			}
+
 			&__perks {
 				color: abstract.$white;
 			}
@@ -117,6 +130,9 @@
 			@media (min-width: 45em) {
 				grid-area: price;
 				margin-bottom: 0;
+			}
+			@media (min-width: 64em) {
+				margin-bottom: 4rem;
 			}
 			&__value {
 				font-size: 3.5rem;

@@ -3,7 +3,13 @@
 .container {
 	max-width: 90em;
 	margin-inline: auto;
-	width: 90%;
+	width: 80%;
+}
+
+body {
+	@media (min-width: 45em) {
+		background-image: initial;
+	}
 }
 
 main {

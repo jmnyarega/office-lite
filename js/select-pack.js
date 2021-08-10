@@ -1,3 +1,5 @@
+const input = document.getElementById("toggle");
+
 const clearSelected = () => {
   const elements = document.querySelectorAll(".options .check");
   elements.forEach((el) => el.classList.remove("check-true"));
@@ -10,4 +12,11 @@ const selectPack = (evt) => {
   const value = selected.querySelector(".value").innerHTML;
   document.querySelector(".selected").innerHTML = value;
   selected.querySelector(".check").classList.add("check-true");
+  input.checked = false;
 };
+
+// accessibility
+
+document.querySelector(".select a").addEventListener("focus", function () {
+  input.checked = true;
+});
