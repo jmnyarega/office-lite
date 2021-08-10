@@ -2,6 +2,13 @@
 
 .input-control {
 	border-bottom: 1px solid abstract.$grayish;
+	display: flex;
+	align-items: center;
+
+	.img-error {
+		opacity: 0;
+		transition: all 350ms linear;
+	}
 
 	input {
 		border: none;
@@ -17,6 +24,20 @@
 			color: abstract.$dark-blue;
 		}
 	}
+
+	&--error {
+		border-bottom: 1px solid abstract.$dark-red;
+		input {
+			&::placeholder {
+				color: abstract.$dark-red;
+			}
+		}
+
+		.img-error {
+			opacity: 1;
+		}
+	}
+
 	&:hover, &:focus-within {
 		border-bottom: 1px solid currentColor;
 	}

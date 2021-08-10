@@ -56,39 +56,65 @@
           </div>
         </div>
       </section>
-      <form action="#" novalidate class="form container">
-        <div class="input-control">
-          <input type="text" placeholder="Name" />
+      <form
+        action="#"
+        novalidate
+        class="form container"
+        onsubmit="return handleSubmit()"
+        id="form"
+      >
+        <div class="input-control" id="name">
+          <input type="text" placeholder="Name" name="name" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="name is required"
+            class="img-error"
+          />
         </div>
-        <div class="input-control">
-          <input type="email" placeholder="Email Address" />
+        <div class="input-control" id="email">
+          <input type="email" placeholder="Email Address" name="email" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="valid email is required"
+            class="img-error"
+          />
         </div>
-        <div class="input-control select">
-          <input type="checkbox" name="" id="toggle" />
+        <div class="input-control select" id="option">
+          <input type="checkbox" name="option" id="toggle" />
           <label for="toggle" id="selected" class="selected">
             <span>Basic Pack</span>Free
           </label>
           <div class="options">
             <a href="#" class="option" onclick="return selectPack(0)">
-              <div class="value"><span>Basic Pack</span>Free</div>
+              <div class="value"><span>Basic Pack </span>Free</div>
               <div class="check"></div>
             </a>
             <a href="#" class="option" onclick="return selectPack(1)">
-              <div class="value"><span>Pro Pack</span>$9.99</div>
+              <div class="value"><span>Pro Pack </span>$9.99</div>
               <div class="check"></div>
             </a>
             <a href="#" class="option" onclick="return selectPack(2)">
-              <div class="value"><span>Ultimate Pack</span>$19.99</div>
+              <div class="value"><span>Ultimate Pack </span>$19.99</div>
               <div class="check"></div>
             </a>
           </div>
           <div class="checked_img"></div>
         </div>
-        <div class="input-control">
-          <input type="tel" name="" id="" placeholder="Phone Number" />
+        <div class="input-control" id="phone">
+          <input type="tel" name="phone" placeholder="Phone Number" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="valid phone number is required"
+            class="img-error"
+          />
         </div>
-        <div class="input-control">
-          <input type="text" placeholder="Company" />
+        <div class="input-control" id="company">
+          <input type="text" placeholder="Company" name="company" />
+          <img
+            src="./assets/sign-up/icon-cross.svg"
+            alt="company is required"
+            class="img-error"
+          />
         </div>
         <button type="submit" class="button">Get on the list</button>
       </form>
@@ -96,5 +122,6 @@
     <footer class="footer"></footer>
     <script src="./js/countdown.js"></script>
     <script src="./js/select-pack.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>

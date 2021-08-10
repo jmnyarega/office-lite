@@ -60,6 +60,10 @@
 	.selected, .option {
 		color: abstract.$grayish;
 		font-weight: bold;
+		font-size: 0.8rem;
+		@media (min-width: 45em) {
+			font-size: 1rem;
+		}
 		span:first-child {
 			display: inline-block;
 			color: abstract.$dark-blue;

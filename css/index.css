@@ -478,17 +478,16 @@ img:not([alt]) {
 }
 
 .bottom {
-  padding-block: 33rem 6.25rem;
-  margin-top: -33rem;
   background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
   background-color: #262a3b;
-  grid-area: bottom;
+  background-position: top center;
+  padding-block: 50rem 6.25rem;
+  margin-top: -50rem;
 }
 @media (min-width: 45em) {
   .bottom {
-    background-position: center;
-    padding-block: 15rem 6.25rem;
-    margin-top: -15rem;
+    padding-block: 33rem 6.25rem;
+    margin-top: -33rem;
   }
 }
 @media (min-width: 64em) {
@@ -497,6 +496,7 @@ img:not([alt]) {
     background-size: 95% auto;
     padding-block: 15rem 6.25rem;
     margin-top: -15rem;
+    grid-area: bottom;
   }
 }
 @media (min-width: 64em) {
