@@ -4,11 +4,11 @@
 	background-size: 32rem auto;
 	background-position: bottom center;
 
-	grid-area: header;
 
 	@media (min-width: 45em) {
 		background: initial;
 		min-height: 0;
+		grid-area: header;
 	}
 
 	&__logo {

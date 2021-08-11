@@ -6,10 +6,14 @@
 	padding: 0.8em 1.6em;
 	border-radius: 99rem;
 	font-weight: bold;
+	text-decoration: none;
 
 	cursor: pointer;
 	color: abstract.$white;
 	background-color: abstract.$sky-blue;
+
+	display: inline-block;
+	width: max-content;
 
 	transition: all 200ms linear;
 

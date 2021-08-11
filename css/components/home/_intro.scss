@@ -4,15 +4,17 @@
 	margin-top: -9rem;
 	position: relative;
 	z-index: 2;
-	grid-area: intro;
 	@media (min-width: 45em) {
-		text-align: initial;
-		margin-top: 5rem;
+		grid-area: intro;
+
 		display: flex;
 		justify-content: space-between;
-		column-gap: 1.5rem;
-		align-items: center;
 		flex-direction: row-reverse;
+		align-items: center;
+		column-gap: 1.5rem;
+
+		text-align: initial;
+		margin-top: 5rem;
 	}
 
 	&__content {
@@ -36,14 +38,7 @@
 
 	&__button {
 		margin-top: 1.5rem;
-		display: inline-block;
-		width: max-content;
-		text-decoration: none;
 		box-shadow: -1px 5px 10px 3px rgba($color: abstract.$sky-blue, $alpha: 0.3);
-	}
-
-	@media (min-width: 64em) {
-		text-align: initial;
 	}
 
 	&__title {
@@ -51,11 +46,17 @@
 		line-height: 1.2;
 		color: abstract.$dark-blue;
 		max-width: 18ch;
+		margin-inline: auto;
 		@media (min-width: 45em) {
 			p { display: inline; }
 		}
 
+		@media (min-width: 45em) {
+			margin-inline: initial;
+		}
+
 	}
+
 	&__text {
 		margin-top: 1.5rem;
 		color: abstract.$dust-blue;

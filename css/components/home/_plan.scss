@@ -4,12 +4,11 @@
 	margin-top: 5.625rem;
 	position: relative;
 	z-index: 2;
-	grid-area: plans;
 
 	@media (min-width: 64em) {
+		grid-area: plans;
 		display: flex;
 		justify-content: space-between;
-		align-items: baseline;
 	}
 
 	.plan {
@@ -20,24 +19,27 @@
 
 		@media (min-width: 45em) {
 			text-align: initial;
-			align-items: center;
+
 			display: grid;
-			grid-template-rows: 0.5fr 0.5fr 0fr;
-			grid-template-areas: "title perks"
-			"price perks"
-			"button perks";
+			align-items: center;
+			grid-template-areas: "title perks" "price perks" "button perks"
 		}
 
 		@media (min-width: 64em) {
 			text-align: center;
-			grid-template-rows: auto;
 			grid-template-areas: "title title" "price price" "perks perks" "button button";
+		}
+
+		+ .plan {
+			margin-top: 1rem;
+			@media (min-width: 64em) {
+				margin-top: 0;
+			}
 		}
 
 		&__perks {
 			color: abstract.$dust-blue;
 			list-style: none;
-			padding: 0;
 			text-align: center;
 			grid-area: perks;
 			@media (min-width: 45em) {
@@ -53,11 +55,36 @@
 			}
 		}
 
+		&__title {
+			font-size: 1.25rem;
+			margin-bottom: 2.75rem;
+			@media (min-width: 45em) {
+				grid-area: title;
+				margin-bottom: 0;
+			}
+		}
+
+		.price {
+			margin-bottom: 2.75rem;
+			@media (min-width: 45em) {
+				grid-area: price;
+				margin-bottom: 0;
+			}
+			@media (min-width: 64em) {
+				margin-bottom: 4rem;
+			}
+			&__value {
+				font-size: 3.5rem;
+				font-weight: bold;
+			}
+
+			&__label {
+				font-size: 1rem;
+			}
+		}
+
 		&__button {
-			text-decoration: none;
-			display: inline-block;
 			margin-top: 2rem;
-			width: max-content;
 
 			background-color: abstract.$very-light-blue;
 			color: abstract.$sky-blue;
@@ -82,20 +109,16 @@
 			background-image: url(../../assets/home/bg-pattern-pricing.svg);
 			background-repeat: no-repeat;
 			background-position: bottom center;
-			min-height: 31.75rem;
 			color: abstract.$white;
 
 			@media (min-width: 45em) {
-				min-height: initial;
 				background-position: center left -100%;
 				background-size: 80% auto;
 			}
 
 			@media (min-width: 64em) {
-				background-size: 80% auto;
-				background-position: top center;
-				background-position-y: -10.5rem;
-				background-size: 150% auto;
+				background-size: cover;
+				background-position: center -10.5rem;
 			}
 
 			&__perks {
@@ -110,39 +133,6 @@
 					background-color: abstract.$sky-blue;
 					border: 1px solid  abstract.$white;
 				}
-			}
-		}
-
-		+ .plan {
-			margin-top: 1rem;
-		}
-
-		&__title {
-			font-size: 1.25rem;
-			margin-bottom: 2.75rem;
-			@media (min-width: 45em) {
-				grid-area: title;
-				margin-bottom: 0;
-			}
-		}
-
-
-		.price {
-			margin-bottom: 2.75rem;
-			@media (min-width: 45em) {
-				grid-area: price;
-				margin-bottom: 0;
-			}
-			@media (min-width: 64em) {
-				margin-bottom: 4rem;
-			}
-			&__value {
-				font-size: 3.5rem;
-				font-weight: bold;
-			}
-
-			&__label {
-				font-size: 1rem;
 			}
 		}
 	}

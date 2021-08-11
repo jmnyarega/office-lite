@@ -1,7 +1,13 @@
 .countdown {
-    grid-area: countdown;
     @media (min-width: 64em) {
-		margin-inline: initial;
-		max-width: initial;
+	grid-area: countdown;
+	margin-inline: initial;
+	max-width: initial;
+    }
+
+    &__clock {
+	@media (min-width: 64em) {
+	    justify-content: initial;
+	}
     }
 }

@@ -16,9 +16,10 @@
 	@media (min-width: 64em) {
 		background-position: -12rem -12rem;
 		background-size: 95% auto;
+		grid-area: bottom;
+
 		padding-block: 15rem 6.25rem;
 		margin-top: -15rem;
-		grid-area: bottom;
 	}
 
 	.container {
@@ -31,15 +32,12 @@
 
 	.cta {
 		margin-inline: auto;
-		width: max-content;
 		@media (min-width: 64em) {
 			margin-inline: initial;
 		}
 		.button {
 			margin-top: 2.5rem;
 			display: inline-block;
-			width: max-content;
-			text-decoration: none;
 			&:hover, &:focus {
 				color: abstract.$very-dark-blue;
 				background-color: abstract.$white;
