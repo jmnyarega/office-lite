@@ -115,6 +115,14 @@ img:not([alt]) {
     margin-inline: initial;
   }
 }
+.header a {
+  width: max-content;
+  outline: none;
+}
+.header a:hover, .header a:focus-within {
+  outline: 2px dotted #757c95;
+  outline-offset: 0.5rem;
+}
 @media (min-width: 64em) {
   .header {
     display: grid;
@@ -350,6 +358,7 @@ img:not([alt]) {
   position: relative;
   z-index: 2;
   max-width: 45ch;
+  width: 100%;
   margin-inline: auto;
 }
 @media (min-width: 64em) {
