@@ -1,22 +1,48 @@
+// DOM elements
 const input = document.getElementById("toggle");
+const link = document.querySelector(".options a");
+const selectedElement = document.querySelector(".selected");
+const checkIcon = document.querySelectorAll(".options .check");
 
-const clearSelected = () => {
-  const elements = document.querySelectorAll(".options .check");
-  elements.forEach((el) => el.classList.remove("check-true"));
-};
+// DOM utility function
+const clearSelected = () =>
+  checkIcon.forEach((el) => el.classList.remove("check-true"));
 
-const selectPack = (evt) => {
-  clearSelected();
-  const selector = `.option:nth-child(${evt + 1})`;
-  const selected = document.querySelector(selector);
-  const value = selected.querySelector(".value").innerHTML;
-  document.querySelector(".selected").innerHTML = value;
+function getCurrentClass(evt) {
+  return document.querySelector(`.option:nth-child(${evt})`);
+}
+
+function getSelectedValue(selected) {
+  return selected.querySelector(".value").innerHTML;
+}
+
+function updatedSelectedValue(value) {
+  selectedElement.innerHTML = value;
+}
+
+function toggleClassName(selected) {
   selected.querySelector(".check").classList.add("check-true");
-  input.checked = false;
-};
+}
 
-// accessibility
+function toggleInput() {
+  if (input.checked) input.checked = false;
+  else input.checked = true;
+}
 
-document.querySelector(".select a").addEventListener("focus", function () {
+function checkInput() {
   input.checked = true;
+}
+
+// close dialog select value
+link.addEventListener("focus", function () {
+  checkInput();
 });
+
+// manipulate DOM on item select
+function selectPack(evt) {
+  clearSelected();
+  const selected = getCurrentClass(evt);
+  updatedSelectedValue(getSelectedValue(selected));
+  toggleClassName(selected);
+  toggleInput();
+}

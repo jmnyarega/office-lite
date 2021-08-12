@@ -3,7 +3,7 @@
 .intro {
     margin-top: -9rem;
     position: relative;
-    z-index: $z-index1;
+    z-index: abstract.$z-index1;
 
     @media (min-width: 45em) {
         text-align: initial;

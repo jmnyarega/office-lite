@@ -256,7 +256,10 @@ img:not([alt]) {
   padding-block: 1rem 0.5rem;
 }
 .select input {
-  display: none;
+  position: absolute;
+  top: -100rem;
+  z-index: -10;
+  z-index: 1;
 }
 .select .selected {
   cursor: pointer;
@@ -338,7 +341,7 @@ img:not([alt]) {
   border-radius: 0.5rem;
   padding: 3rem;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   max-width: 45ch;
   width: 100%;
   margin-inline: auto;
@@ -361,7 +364,7 @@ img:not([alt]) {
 
 .intro {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   margin-top: -9rem;
   grid-area: intro;
 }
