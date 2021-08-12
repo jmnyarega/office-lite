@@ -1,7 +1,11 @@
-/*
- * - font types
- * - font sizes ...
- *
- */
+// font faces
+$ff-default: 'Kumbh Sans', sans-serif;
 
-$f-family: 'Kumbh Sans', sans-serif;
+// font sizes
+$fs-small: 0.8rem;
+$fs-default: 1rem;
+$fs-normal: 1.2rem;
+$fs-medium: 2rem; // 1.8rem
+$fs-large: 2.5rem;
+$fs-x-large: 3.5rem;
+

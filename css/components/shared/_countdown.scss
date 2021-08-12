@@ -6,59 +6,55 @@
     margin-inline: auto;
 
     &__title {
-	text-transform: uppercase;
-	font-weight: bold;
-	color: abstract.$dark-blue;
-	@media (min-width: 45em) {
-	    text-align: center;
-	}
+        text-transform: uppercase;
+        font-weight: bold;
+        color: abstract.$dark-blue;
+        @media (min-width: 45em) {
+            text-align: center;
+        }
 
-	@media (min-width: 64em) {
-	    text-align: initial;
-	}
+        @media (min-width: 64em) {
+            text-align: initial;
+        }
 
-	span {
-	    color: abstract.$sky-blue;
-	}
+        span {
+            color: abstract.$sky-blue;
+        }
     }
 
     &__clock {
-	margin-top: 2rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 1rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
 
-	div {
-	    background-color: abstract.$very-light-blue;
-	    padding: 0.8125rem 1rem ;
-	    border-radius: 0.5rem;
+        div {
+            background-color: abstract.$very-light-blue;
+            padding: 0.8125rem 1rem ;
+            border-radius: 0.5rem;
+            margin-inline: auto;
 
-	    @media (min-width: 45em) {
-		min-width: 6.25rem;
-		margin-inline: auto;
-		@media (min-width: 45em) {
-		    margin-inline: initial;
-		}
-	    }
-	    p:first-child {
-		color: abstract.$sky-blue;
-		font-size: 1.8rem;
-		font-weight: bold;
-		@media (min-width: 45em) {
-		    font-size: 3.5rem;
-		}
-	    }
-	    p:last-child {
-		color: abstract.$dark-blue;
-		font-size: 0.75rem;
-		font-weight: bold;
-		text-align: center;
-		@media (min-width: 45em) {
-		    font-size: initial;
-		}
-	    }
-	}
+            text-align: center;
+
+            @media (min-width: 45em) {
+                margin-inline: initial;
+            }
+
+            p:first-child {
+                color: abstract.$sky-blue;
+                font-size: abstract.$fs-medium;
+                font-weight: bold;
+                @media (min-width: 45em) {
+                    font-size: abstract.$fs-x-large;
+                }
+            }
+
+            p:last-child {
+                color: abstract.$dark-blue;
+                font-weight: bold;
+            }
+        }
     }
 }
 

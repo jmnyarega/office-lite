@@ -1,17 +1,14 @@
-// layout
-
 body {
-	@media (min-width: 45em) {
-		background-image: initial;
-	}
+    @media (min-width: 45em) {
+        background-image: initial;
+    }
 }
 
 main {
-	@media (min-width: 64em) {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		justify-content: space-between;
-		grid-template-areas: "intro form"
-							 "countdown form";
-	}
+    @media (min-width: 64em) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        grid-template-areas: "intro form" "countdown form";
+    }
 }

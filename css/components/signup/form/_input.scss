@@ -1,50 +1,50 @@
 @use 'abstract';
 
 .input-control {
-	border-bottom: 1px solid abstract.$grayish;
-	position: relative;
+    border-bottom: 1px solid abstract.$grayish;
+    position: relative;
 
-	.img-error {
-		padding-block: 1rem;
-		position: absolute;
-		right: 0.5rem;
-		top: 0;
-		
-		width: 1.25rem;
+    .img-error {
+        padding-block: 1rem;
+        position: absolute;
+        right: 0.5rem;
+        top: 0;
 
-		opacity: 0;
-		transition: all 350ms linear;
-	}
+        width: 1.25rem;
 
-	input {
-		border: none;
-		outline: none;
-		width: 100%;
-		height: 2.8125rem;
+        opacity: 0;
+        transition: all 350ms linear;
+    }
 
-		&::placeholder {
-			color: abstract.$dust-blue;
-		}
+    input {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 2.8125rem;
 
-		&:focus::placeholder, &:hover::placeholder {
-			color: abstract.$dark-blue;
-		}
-	}
+        &::placeholder {
+            color: abstract.$dust-blue;
+        }
 
-	&--error {
-		border-bottom: 1px solid abstract.$dark-red;
-		input {
-			&::placeholder {
-				color: abstract.$dark-red;
-			}
-		}
+        &:focus::placeholder, &:hover::placeholder {
+            color: abstract.$dark-blue;
+        }
+    }
 
-		.img-error {
-			opacity: 1;
-		}
-	}
+    &--error {
+        border-bottom: 1px solid abstract.$dark-red;
+        input {
+            &::placeholder {
+                color: abstract.$dark-red;
+            }
+        }
 
-	&:hover, &:focus-within {
-		border-bottom: 1px solid currentColor;
-	}
+        .img-error {
+            opacity: 1;
+        }
+    }
+
+    &:hover, &:focus-within {
+        border-bottom: 1px solid currentColor;
+    }
 }

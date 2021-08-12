@@ -1,89 +1,95 @@
 @use 'abstract';
 
 .select {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	padding-block: 1rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-block: 1rem 0.5rem;
 
-	input { display: none; }
-	.selected { cursor: pointer; }
+    input { display: none; }
+    .selected { cursor: pointer; }
 
-	.checked_img {
-		background-image: url(../assets/sign-up/icon-arrow-down.svg);
-		background-repeat: no-repeat;
-		height: 0.5rem;
-		width: 0.8125rem;
-		transition: all 200ms linear;
-	}
+    .checked_img {
+        background-image: url(../assets/sign-up/icon-arrow-down.svg);
+        background-repeat: no-repeat;
+        height: 0.5rem;
+        width: 0.8125rem;
+        transition: all 200ms linear;
+    }
 
-	.options {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 3.5em;
-		background-color: abstract.$white;
-		padding: 0.5rem 2rem;
-		border-radius: 0.5rem;
-		box-shadow:-3px 6px 14px 0px rgb(0 0 0 / 33%);
+    .options {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 3.5em;
 
-		opacity: 0;
-		z-index: -1;
-		height: 0;
-		transition: all 100ms linear;
+        background-color: abstract.$white;
+        padding: 0.5rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow:-3px 6px 14px 0px rgb(0 0 0 / 33%);
 
-		.check-true {
-			background-image: url(../../../assets/sign-up/icon-check.svg);
-			background-repeat: no-repeat;
-			min-height: 0.9375rem;
-			width: 0.75rem;
-		}
+        opacity: 0;
+        z-index: -1;
+        height: 0;
+        transition: all 100ms linear;
 
-		.option {
-			display: block;
-			text-decoration: none;
-			padding-block: 1.5rem 1.3125rem;
-			display: flex;
-			justify-content: space-between;
+        .check-true {
+            background-image: url(../../../assets/sign-up/icon-check.svg);
+            background-repeat: no-repeat;
+            min-height: 0.9375rem;
+            width: 0.75rem;
+        }
 
-			&:hover, &:focus {
-				outline: 1px dotted abstract.$dust-blue;
-			}
+        .option {
+            text-decoration: none;
+            padding-block: 1.5rem 1.3125rem;
 
-			+ .option {
-				border-top: 1px solid abstract.$dust-blue;
-			}
-		}
-	}
+            display: flex;
+            justify-content: space-between;
 
-	.selected, .option {
-		color: abstract.$grayish;
-		font-weight: bold;
-		font-size: 0.8rem;
-		@media (min-width: 45em) {
-			font-size: 1rem;
-		}
-		span:first-child {
-			display: inline-block;
-			color: abstract.$dark-blue;
-			margin-right: 0.5rem;
-		}
-	}
+            &:hover, &:focus {
+                outline: 1px dotted abstract.$dust-blue;
+            }
 
-	&:focus-within {
-		outline: 1px dotted abstract.$dust-blue;
-	}
+            + .option {
+                border-top: 1px solid abstract.$dust-blue;
+            }
+        }
+    }
+
+    .selected {
+        flex: 1 1;
+        text-align: initial;
+    }
+
+    .selected, .option {
+        color: abstract.$grayish;
+        font-weight: bold;
+        font-size: abstract.$fs-small;
+        @media (min-width: 45em) {
+            font-size: abstract.$fs-default;
+        }
+        span:first-child {
+            display: inline-block;
+            color: abstract.$dark-blue;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &:focus-within {
+        outline: 1px dotted abstract.$dust-blue;
+    }
 }
 
 #toggle:checked {
-	~ .options {
-		opacity: 1;
-		height: auto;
-		z-index: 1;
-	}
+    ~ .options {
+        opacity: 1;
+        height: auto;
+        z-index: 1;
+    }
 
-	~ .checked_img {
-		transform: rotate(180deg);
-	}
+    ~ .checked_img {
+        transform: rotate(180deg);
+    }
 }

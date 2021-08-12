@@ -1,26 +1,24 @@
-// layout
 @use 'abstract';
 
 body {
     @media (min-width: 45em) {
-	background-image: url(../../../assets/home/bg-pattern-header.svg);
-	background-repeat: no-repeat;
-	background-size: 32rem auto;
-	background-position: 35.4375rem 0;
-	background-size: 80% auto;
+        background-image: url(../../../assets/home/bg-pattern-header.svg);
+        background-repeat: no-repeat;
+        background-size: 32rem auto;
+        background-position: 35.4375rem 0;
+        background-size: 80% auto;
 
-	min-height: 20rem;
+        min-height: 20rem;
     }
 
     @media (min-width: 64em) {
-	background-position: 35.4375rem -25.4375rem;
-	text-align: initial;
+        background-position: 35.4375rem -25.4375rem;
+        text-align: initial;
 
-	display: grid;
-	grid-template-areas:
-	"header header"
-	"intro intro"
-	"plans plans"
-	"bottom bottom";
+        display: grid;
+        grid-template-areas: "header header"
+                            "intro intro"
+                            "plans plans"
+                            "bottom bottom";
     }
 }

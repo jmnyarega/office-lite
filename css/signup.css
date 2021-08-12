@@ -1,19 +1,9 @@
 /*
- * - font types
- * - font sizes ...
- *
- */
-/*
  * variable colors
- *
- */
-/*
- * Global styles
  *
  */
 body {
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 1rem;
   text-align: center;
   background-color: #f2f2f2;
 }
@@ -95,9 +85,9 @@ img:not([alt]) {
 }
 .header {
   background: no-repeat url(../../../assets/home/bg-pattern-header.svg);
-  min-height: 20rem;
   background-size: 32rem auto;
   background-position: bottom center;
+  min-height: 20rem;
 }
 @media (min-width: 45em) {
   .header {
@@ -164,21 +154,17 @@ img:not([alt]) {
   background-color: rgba(128, 153, 255, 0.3);
   padding: 0.8125rem 1rem;
   border-radius: 0.5rem;
+  margin-inline: auto;
+  text-align: center;
 }
 @media (min-width: 45em) {
-  .countdown__clock div {
-    min-width: 6.25rem;
-    margin-inline: auto;
-  }
-}
-@media (min-width: 45em) and (min-width: 45em) {
   .countdown__clock div {
     margin-inline: initial;
   }
 }
 .countdown__clock div p:first-child {
   color: #5274ff;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 @media (min-width: 45em) {
@@ -188,14 +174,7 @@ img:not([alt]) {
 }
 .countdown__clock div p:last-child {
   color: #343a51;
-  font-size: 0.75rem;
   font-weight: bold;
-  text-align: center;
-}
-@media (min-width: 45em) {
-  .countdown__clock div p:last-child {
-    font-size: initial;
-  }
 }
 
 @media (min-width: 64em) {
@@ -213,11 +192,11 @@ img:not([alt]) {
 
 .button {
   outline: none;
+  text-decoration: none;
   border: 1px solid transparent;
   padding: 0.8em 1.6em;
-  border-radius: 99rem;
+  border-radius: 99em;
   font-weight: bold;
-  text-decoration: none;
   cursor: pointer;
   color: white;
   background-color: #5274ff;
@@ -310,7 +289,6 @@ img:not([alt]) {
   width: 0.75rem;
 }
 .select .options .option {
-  display: block;
   text-decoration: none;
   padding-block: 1.5rem 1.3125rem;
   display: flex;
@@ -321,6 +299,10 @@ img:not([alt]) {
 }
 .select .options .option + .option {
   border-top: 1px solid #757c95;
+}
+.select .selected {
+  flex: 1 1;
+  text-align: initial;
 }
 .select .selected, .select .option {
   color: #969696;

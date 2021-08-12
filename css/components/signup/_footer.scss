@@ -1,23 +1,23 @@
 @use 'abstract';
 
 .footer {
-	background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-	background-color: abstract.$very-dark-blue;
-	background-position: center;
+    background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
+    background-color: abstract.$very-dark-blue;
+    background-position: center;
 
-	margin-top: -14.625rem;
-	padding-block: 14.625rem 6.25rem;
+    margin-top: -14.625rem;
+    padding-block: 14.625rem 6.25rem;
 
-	@media (min-width: 64em) {
-		background-position: bottom center;
-	}
+    @media (min-width: 64em) {
+        background-position: bottom center;
+    }
 
-	@media (min-width: 64em) {
-		position: absolute;
-		min-height: 100vh;
-		left: 70%;
-		right: 0;
-		top: 0;
-		bottom: 0;
-	}
+    @media (min-width: 64em) {
+        position: absolute;
+        min-height: 100vh;
+        left: 70%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }

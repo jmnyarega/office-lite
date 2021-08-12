@@ -1,48 +1,48 @@
 @use 'abstract';
 
 .bottom {
-	background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
-	background-color: abstract.$very-dark-blue;
-	background-position: top center;
+    background: no-repeat url(../../../assets/home/bg-pattern-footer.svg);
+    background-color: abstract.$very-dark-blue;
+    background-position: top center;
 
-	padding-block: 50rem 6.25rem;
-	margin-top: -50rem;
+    padding-block: 50rem 6.25rem;
+    margin-top: -50rem;
 
-	@media (min-width: 45em) {
-		padding-block: 33rem 6.25rem;
-		margin-top: -33rem;
-	}
+    @media (min-width: 45em) {
+        padding-block: 33rem 6.25rem;
+        margin-top: -33rem;
+        grid-area: bottom;
+    }
 
-	@media (min-width: 64em) {
-		background-position: -12rem -12rem;
-		background-size: 95% auto;
-		grid-area: bottom;
+    @media (min-width: 64em) {
+        background-position: -12rem -12rem;
+        background-size: 95% auto;
 
-		padding-block: 15rem 6.25rem;
-		margin-top: -15rem;
-	}
+        padding-block: 15rem 6.25rem;
+        margin-top: -15rem;
+    }
 
-	.container {
-		@media (min-width: 64em) {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-	}
+    .container {
+        @media (min-width: 64em) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 
-	.cta {
-		margin-inline: auto;
-		@media (min-width: 64em) {
-			margin-inline: initial;
-		}
-		.button {
-			margin-top: 2.5rem;
-			display: inline-block;
-			&:hover, &:focus {
-				color: abstract.$very-dark-blue;
-				background-color: abstract.$white;
-				border: 1px solid abstract.$very-dark-blue;
-			}
-		}
-	}
+    .cta {
+        margin-inline: auto;
+        @media (min-width: 64em) {
+            margin-inline: initial;
+        }
+        .button {
+            margin-top: 2.5rem;
+            display: inline-block;
+            &:hover, &:focus {
+                color: abstract.$very-dark-blue;
+                background-color: abstract.$white;
+                border: 1px solid abstract.$very-dark-blue;
+            }
+        }
+    }
 }

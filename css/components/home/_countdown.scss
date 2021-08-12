@@ -2,15 +2,15 @@
 
 .countdown {
     &__clock--home div {
-	background-color: abstract.$dark-blue;
-	p:first-child { color: abstract.$white; }
-	p:last-child { color: abstract.$white; opacity: 0.6 }
+        background-color: abstract.$dark-blue;
+        p:first-child { color: abstract.$white; }
+        p:last-child { color: abstract.$white; opacity: 0.6 }
     }
     &__title--home {
-	color: abstract.$white;
+        color: abstract.$white;
     }
     @media (min-width: 64em) {
-	margin-inline: initial;
+        margin-inline: initial;
     }
 }
 

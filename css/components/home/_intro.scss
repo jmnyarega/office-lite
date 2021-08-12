@@ -1,69 +1,69 @@
 @use 'abstract';
 
 .intro {
-	margin-top: -9rem;
-	position: relative;
-	z-index: 2;
-	@media (min-width: 45em) {
-		grid-area: intro;
+    margin-top: -9rem;
+    position: relative;
+    z-index: 2;
+    @media (min-width: 45em) {
+        text-align: initial;
+        margin-top: 5rem;
 
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row-reverse;
-		align-items: center;
-		column-gap: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: 1.5rem;
 
-		text-align: initial;
-		margin-top: 5rem;
-	}
+        grid-area: intro;
+    }
 
-	&__content {
-		margin-inline: auto;
+    &__content {
+        margin-inline: auto;
 
-		@media (min-width: 45em) {
-			margin-inline: initial;
-		}
-	}
+        @media (min-width: 45em) {
+            margin-inline: initial;
+        }
+    }
 
-	&__img {
-		width: 50%;
-		margin-inline: auto;
-		margin-bottom: 4rem;
+    &__img {
+        width: 50%;
+        margin-inline: auto;
+        margin-bottom: 4rem;
 
-		@media (min-width: 45em) {
-			margin-inline: initial;
-			margin-bottom: 0;
-		}
-	}
+        @media (min-width: 45em) {
+            margin-inline: initial;
+            margin-bottom: 0;
+        }
+    }
 
-	&__button {
-		margin-top: 1.5rem;
-		box-shadow: -1px 5px 10px 3px rgba($color: abstract.$sky-blue, $alpha: 0.3);
-	}
+    &__button {
+        margin-top: 1.5rem;
+        box-shadow: -1px 5px 10px 3px rgba($color: abstract.$sky-blue, $alpha: 0.3);
+    }
 
-	&__title {
-		font-size: 2.5rem;
-		line-height: 1.2;
-		color: abstract.$dark-blue;
-		max-width: 18ch;
-		margin-inline: auto;
-		@media (min-width: 45em) {
-			p { display: inline; }
-		}
+    &__title {
+        font-size: abstract.$fs-large;
+        line-height: 1.2;
+        color: abstract.$dark-blue;
+        max-width: 18ch;
+        margin-inline: auto;
+        @media (min-width: 45em) {
+            p { display: inline; }
+        }
 
-		@media (min-width: 45em) {
-			margin-inline: initial;
-		}
+        @media (min-width: 45em) {
+            margin-inline: initial;
+        }
 
-	}
+    }
 
-	&__text {
-		margin-top: 1.5rem;
-		color: abstract.$dust-blue;
-		max-width: 55ch;
-		margin-inline: auto;
-		@media (min-width: 45em) {
-			margin-inline: initial;
-		}
-	}
+    &__text {
+        margin-top: 1.5rem;
+        color: abstract.$dust-blue;
+        max-width: 55ch;
+        margin-inline: auto;
+        @media (min-width: 45em) {
+            margin-inline: initial;
+        }
+    }
 }

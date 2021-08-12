@@ -1,25 +1,26 @@
 @use 'abstract';
 
 .button {
-	outline: none;
-	border: 1px solid transparent;
-	padding: 0.8em 1.6em;
-	border-radius: 99rem;
-	font-weight: bold;
-	text-decoration: none;
+    outline: none;
+    text-decoration: none;
 
-	cursor: pointer;
-	color: abstract.$white;
-	background-color: abstract.$sky-blue;
+    border: 1px solid transparent;
+    padding: 0.8em 1.6em;
+    border-radius: 99em;
+    font-weight: bold;
 
-	display: inline-block;
-	width: max-content;
+    cursor: pointer;
+    color: abstract.$white;
+    background-color: abstract.$sky-blue;
 
-	transition: all 200ms linear;
+    display: inline-block;
+    width: max-content;
 
-	&:hover, &:focus {
-		color: abstract.$sky-blue;
-		background-color: transparent;
-		border: 1px solid  abstract.$sky-blue;
-	}
+    transition: all 200ms linear;
+
+    &:hover, &:focus {
+        color: abstract.$sky-blue;
+        background-color: transparent;
+        border: 1px solid  abstract.$sky-blue;
+    }
 }

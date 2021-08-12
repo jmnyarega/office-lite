@@ -1,139 +1,134 @@
 @use 'abstract';
 
 .plans {
-	margin-top: 5.625rem;
-	position: relative;
-	z-index: 2;
+    margin-top: 5.625rem;
+    position: relative;
+    z-index: 2;
 
-	@media (min-width: 64em) {
-		grid-area: plans;
-		display: flex;
-		justify-content: space-between;
-	}
+    @media (min-width: 64em) {
+        grid-area: plans;
+        display: flex;
+        justify-content: space-between;
+    }
 
-	.plan {
-		border-radius: 0.5rem;
-		padding: 2.5rem 3.5rem;
-		background-color: abstract.$white;
-		color: abstract.$dark-blue;
+    .plan {
+        border-radius: 0.5rem;
+        padding: 2.5rem 3.5rem;
+        background-color: abstract.$white;
+        color: abstract.$dark-blue;
 
-		@media (min-width: 45em) {
-			text-align: initial;
+        @media (min-width: 45em) {
+            text-align: initial;
 
-			display: grid;
-			align-items: center;
-			grid-template-areas: "title perks" "price perks" "button perks"
-		}
+            display: grid;
+            align-items: center;
+            grid-template-areas: "title perks" "price perks" "button perks"
+        }
 
-		@media (min-width: 64em) {
-			text-align: center;
-			grid-template-areas: "title title" "price price" "perks perks" "button button";
-		}
+        @media (min-width: 64em) {
+            text-align: center;
+            grid-template-areas: "title title" "price price" "perks perks" "button button";
+        }
 
-		+ .plan {
-			margin-top: 1rem;
-			@media (min-width: 64em) {
-				margin-top: 0;
-			}
-		}
+        + .plan {
+            margin-top: 1rem;
+            @media (min-width: 64em) {
+                margin-top: 0;
+            }
+        }
 
-		&__perks {
-			color: abstract.$dust-blue;
-			list-style: none;
-			text-align: center;
-			grid-area: perks;
-			@media (min-width: 45em) {
-				text-align: initial;
-			}
+        &__perks {
+            color: abstract.$dust-blue;
+            text-align: center;
+            list-style: none;
+            grid-area: perks;
+            @media (min-width: 45em) {
+                text-align: initial;
+            }
 
-			@media (min-width: 64em) {
-				text-align: center;
-			}
+            @media (min-width: 64em) {
+                text-align: center;
+            }
 
-			li + li {
-				margin-top: 1.5rem;
-			}
-		}
+            li + li {
+                margin-top: 1.5rem;
+            }
+        }
 
-		&__title {
-			font-size: 1.25rem;
-			margin-bottom: 2.75rem;
-			@media (min-width: 45em) {
-				grid-area: title;
-				margin-bottom: 0;
-			}
-		}
+        &__title {
+            font-size: abstract.$fs-normal;
+            margin-bottom: 2.75rem;
+            @media (min-width: 45em) {
+                grid-area: title;
+                margin-bottom: 0;
+            }
+        }
 
-		.price {
-			margin-bottom: 2.75rem;
-			@media (min-width: 45em) {
-				grid-area: price;
-				margin-bottom: 0;
-			}
-			@media (min-width: 64em) {
-				margin-bottom: 4rem;
-			}
-			&__value {
-				font-size: 3.5rem;
-				font-weight: bold;
-			}
+        .price {
+            margin-bottom: 2.75rem;
+            @media (min-width: 45em) {
+                grid-area: price;
+                margin-bottom: 0;
+            }
+            @media (min-width: 64em) {
+                margin-bottom: 4rem;
+            }
+            &__value {
+                font-size: abstract.$fs-x-large;
+                font-weight: bold;
+            }
+        }
 
-			&__label {
-				font-size: 1rem;
-			}
-		}
+        &__button {
+            margin-top: 2rem;
 
-		&__button {
-			margin-top: 2rem;
+            background-color: abstract.$very-light-blue;
+            color: abstract.$sky-blue;
 
-			background-color: abstract.$very-light-blue;
-			color: abstract.$sky-blue;
+            &:hover, &:focus {
+                color: abstract.$white;
+                background-color: abstract.$sky-blue;
+                border: 1px solid  abstract.$sky-blue;
+            }
 
-			&:hover, &:focus {
-				color: abstract.$white;
-				background-color: abstract.$sky-blue;
-				border: 1px solid  abstract.$sky-blue;
-			}
+            @media (min-width: 45em) {
+                grid-area: button;
+            }
 
-			@media (min-width: 45em) {
-				grid-area: button;
-			}
+            @media (min-width: 64em) {
+                margin-inline: auto;
+            }
+        }
 
-			@media (min-width: 64em) {
-				margin-inline: auto;
-			}
-		}
+        &--pro {
+            background-color: abstract.$sky-blue;
+            background-image: url(../../assets/home/bg-pattern-pricing.svg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            color: abstract.$white;
 
-		&--pro {
-			background-color: abstract.$sky-blue;
-			background-image: url(../../assets/home/bg-pattern-pricing.svg);
-			background-repeat: no-repeat;
-			background-position: bottom center;
-			color: abstract.$white;
+            @media (min-width: 45em) {
+                background-position: center left -100%;
+                background-size: 80% auto;
+            }
 
-			@media (min-width: 45em) {
-				background-position: center left -100%;
-				background-size: 80% auto;
-			}
+            @media (min-width: 64em) {
+                background-size: cover;
+                background-position: center -10.5rem;
+            }
 
-			@media (min-width: 64em) {
-				background-size: cover;
-				background-position: center -10.5rem;
-			}
+            &__perks {
+                color: abstract.$white;
+            }
 
-			&__perks {
-				color: abstract.$white;
-			}
-
-			&__button {
-				background-color: abstract.$white;
-
-				&:hover, &:focus {
-					color: abstract.$white;
-					background-color: abstract.$sky-blue;
-					border: 1px solid  abstract.$white;
-				}
-			}
-		}
-	}
+            &__button {
+                background-color: abstract.$white;
+                &:hover, &:focus {
+                    color: abstract.$white;
+                    background-color: abstract.$sky-blue;
+                    border: 1px solid  abstract.$white;
+                }
+            }
+        }
+    }
 }

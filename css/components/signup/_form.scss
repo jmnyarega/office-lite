@@ -1,30 +1,30 @@
 @use 'abstract';
 
 .form {
-	margin-top: 5.1875rem;
-	background-color: abstract.$white;
-	border-radius: 0.5rem;
-	padding: 3rem;
-	position: relative;
-	z-index: 2;
+    margin-top: 5.1875rem;
+    background-color: abstract.$white;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    position: relative;
+    z-index: 2;
 
-	max-width: 45ch;
-	width: 100%;
-	margin-inline: auto;
+    max-width: 45ch;
+    width: 100%;
+    margin-inline: auto;
 
-	@media (min-width: 64em) {
-		margin-top: 0;
-		grid-area: form;
-		align-self: center;
-		box-shadow: 2px 20px 20px 0px rgb(0 0 0 / 10%);
-	}
+    @media (min-width: 64em) {
+        margin-top: 0;
+        grid-area: form;
+        align-self: center;
+        box-shadow: 2px 20px 20px 0px rgb(0 0 0 / 10%);
+    }
 
-	.button {
-		margin-top: 2rem;
-		width: 100%;
-	}
+    .button {
+        margin-top: 2rem;
+        width: 100%;
+    }
 
-	.input-control + .input-control {
-		margin-top: 1rem;
-	}
+    .input-control + .input-control {
+        margin-top: 1rem;
+    }
 }

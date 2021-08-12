@@ -1,19 +1,13 @@
-/*
- * Global styles
- *
- */
-
 @use 'abstract';
 
 body {
-	font-family: abstract.$f-family;
-	font-size: 1rem;
-	text-align: center;
+    font-family: abstract.$ff-default;
+    text-align: center;
     background-color: abstract.$light-gray;
 }
 
 .container {
-	max-width: 90em;
-	margin-inline: auto;
-	width: 90%;
+    max-width: 90em;
+    margin-inline: auto;
+    width: 90%;
 }
