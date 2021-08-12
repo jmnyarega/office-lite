@@ -2,7 +2,7 @@
 
 .intro {
     position: relative;
-    z-index: 2;
+    z-index: abstract.$z-index1;
     margin-top: -9rem;
     grid-area: intro;
 

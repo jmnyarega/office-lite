@@ -24,7 +24,7 @@
         width: max-content;
         outline: none;
         &:hover, &:focus-within {
-            outline: 2px dotted abstract.$dust-blue;
+            outline: 1px dotted abstract.$dust-blue;
             outline-offset: 0.5rem;
         }
     }

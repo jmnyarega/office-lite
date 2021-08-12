@@ -18,6 +18,10 @@
         transition: all 200ms linear;
     }
 
+    &:focus-within, &:hover {
+        outline: 1px dotted abstract.$dust-blue;
+    }
+
     .options {
         position: absolute;
         left: 0;
@@ -30,7 +34,7 @@
         box-shadow:-3px 6px 14px 0px rgb(0 0 0 / 33%);
 
         opacity: 0;
-        z-index: -1;
+        z-index: abstract.$z-index0;
         height: 0;
         transition: all 100ms linear;
 
@@ -76,17 +80,13 @@
             margin-right: 0.5rem;
         }
     }
-
-    &:focus-within {
-        outline: 1px dotted abstract.$dust-blue;
-    }
 }
 
 #toggle:checked {
     ~ .options {
         opacity: 1;
         height: auto;
-        z-index: 1;
+        z-index: abstract.$z-index1;
     }
 
     ~ .checked_img {

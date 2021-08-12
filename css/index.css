@@ -110,7 +110,7 @@ img:not([alt]) {
   outline: none;
 }
 .header a:hover, .header a:focus-within {
-  outline: 2px dotted #757c95;
+  outline: 1px dotted #757c95;
   outline-offset: 0.5rem;
 }
 @media (min-width: 64em) {
