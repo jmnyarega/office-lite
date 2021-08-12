@@ -210,6 +210,13 @@ img:not([alt]) {
   body {
     background-position: 35.4375rem -25.4375rem;
     text-align: initial;
+  }
+}
+
+@media (min-width: 64em) {
+  main {
+    background-position: 35.4375rem -25.4375rem;
+    text-align: initial;
     display: grid;
     grid-template-areas: "header header" "intro intro" "plans plans" "bottom bottom";
   }
