@@ -1,12 +1,11 @@
-const clear = () => {
-  const elements = document.querySelectorAll(".input-control");
-  elements.forEach((el) => el.classList.remove("input-control--error"));
-};
+const selected = document.getElementById("selected");
+const form = document.getElementById("form");
+const inputs = document.querySelectorAll(".input-control");
 
-const isEmpty = (val) => {
-  if (val.trim().length === 0) return true;
-  return false;
-};
+const clear = () =>
+  inputs.forEach((el) => el.classList.remove("input-control--error"));
+
+const isEmpty = (val) => (val.trim().length === 0 ? true : false);
 
 const isPhone = (val) =>
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(val);
@@ -23,13 +22,12 @@ const showError = (name) => {
 };
 
 const handleSubmit = () => {
-  const form = document.getElementById("form");
   const fd = new FormData(form);
   const name = fd.get("name");
   const email = fd.get("email");
   const phone = fd.get("phone");
   const company = fd.get("company");
-  const option = document.getElementById("selected").innerText;
+  const option = selected.innerText;
   if (isEmpty(name)) {
     showError("name");
     return false;

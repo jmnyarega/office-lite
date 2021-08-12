@@ -1,14 +1,14 @@
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
 const state = {
   days: 0,
   hours: 0,
   minutes: 0,
   seconds: 0,
 };
-
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
 
 const getSeconds = () => {
   state.seconds += 1;
